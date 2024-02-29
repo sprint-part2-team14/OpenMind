@@ -1,0 +1,34 @@
+:root {
+  --gray10 : #FFF;
+  --gray20 : #F9F9F9;
+  --gray30 : #CFCFCF;
+  --gray40 : #818181;
+  --gray50 : #515151;
+  --gray60 : #000;
+
+  --brown10 : #F5F1EE;
+  --brown20 : #E4D5C9;
+  --brown30 : #C7BBB5;
+  --brown40 : #542F1A;
+  --brown50 : #341909;
+
+  --blue50 : #1877F2;
+  --yellow50 : #FEE500;
+  --red50 : #B93333;
+
+  /* font size */
+  --h1 : 4rem;
+  --h2 : 3.2rem;
+  --h3 : 2.4rem;
+
+  --body1 : 2rem;
+  --body2 : 1.8rem;
+  --body3 : 1.6rem;
+
+  --caption : 1.4rem;
+
+  /* shadow */
+  --shadow1pt : 0px 4px 4px 0px rgba(140, 140, 140, 0.25);
+  --shadow2pt : 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow3pt : 0px 16px 20px 0px rgba(48, 48, 48, 0.62);
+}
