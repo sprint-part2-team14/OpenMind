@@ -1,4 +1,4 @@
-@import '../Styles/Css/Global.css';
+@import './Css/Global.css';
 
 .Badge-Border {
   display: inline-flex;

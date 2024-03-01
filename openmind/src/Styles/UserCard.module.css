@@ -1,0 +1,92 @@
+/* styles.module.css */
+@import './Css/Global.css';
+
+.userCard {
+  display: flex;
+  width: 22rem;
+  height: 18.7rem;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 1px solid var(--gray40);
+  background: var(--gray10);
+}
+
+.profileBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 60px;
+}
+
+.profileContext {
+  color: var(--gray60);
+  font-family: Actor;
+  font-size: var(--body1);
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.questionBox {
+  display: flex;
+  width: 100%;
+  height: 2.2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.receiveQuestion {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  opacity: 0.5;
+}
+
+.receiveFeed {
+  color: var(--gray40);
+  font-size: var(--body3);
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 767px) {
+  .userCard {
+    padding: 1.6rem;
+  }
+
+  .image {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 48px;
+  }
+
+  .profileContext {
+    font-size: var(--body2);
+    line-height: 2.4rem;
+  }
+
+  .icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .receiveFeed {
+    font-size: var(--caption);
+    line-height: 1.8rem;
+  }
+}
