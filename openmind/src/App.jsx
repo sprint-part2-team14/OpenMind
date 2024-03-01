@@ -1,10 +1,8 @@
-import Toast from './Components/Toast/Toast'
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      hi
-    </div>
+    // eslint-disable-next-line react/react-in-jsx-scope
+    <div className='App'>hi</div>
   );
-}
+};
 
 export default App;
