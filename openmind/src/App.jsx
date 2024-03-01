@@ -3,7 +3,6 @@ function App() {
   return (
     <div className="App">
       hi
-      <Toast></Toast>
     </div>
   );
 }
