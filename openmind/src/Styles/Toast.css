@@ -1,6 +1,6 @@
 @import './Css/Global.css';
 
-.Toast {
+.toast {
   display: inline-flex;
   padding: 1.2rem 2rem;
   justify-content: center;
