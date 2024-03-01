@@ -1,5 +1,6 @@
 import BoxButton from './Components/BoxButton';
 import FloatingButton from './Components/FloatingButton';
+import ShareButton from './Components/ShareButton';
 import './Styles/Css/Global.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className='App'>
       <BoxButton />
       <FloatingButton />
+      <ShareButton />
     </div>
   );
 }

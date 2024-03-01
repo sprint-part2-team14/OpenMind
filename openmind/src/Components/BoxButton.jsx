@@ -6,14 +6,18 @@ const BoxButton = ({
   state = 'default',
   size = 'medium',
   text = '질문 받기',
-  onClick,
 }) => {
+  const handleOnClick = (e) => {
+    // 필요한 방식으로 바꾸세요
+    console.log(1);
+  };
+
   return (
     <button
       type='button'
       className={`${Styles.boxButton} ${Styles[theme]} ${Styles[size]}`}
       disabled={state === 'inactive' ? true : false}
-      onClick={onClick}
+      onClick={handleOnClick}
     >
       {text}
       <ArrowToPage className={`${Styles.arrowToPageIcon} ${Styles[theme]}`} />
