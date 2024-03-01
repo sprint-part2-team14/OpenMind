@@ -4,7 +4,6 @@ import Styles from '../Styles/BoxButton.module.css';
 const BoxButton = ({
   theme = 'fill',
   state = 'default',
-  size = 'medium',
   text = '질문 받기',
 }) => {
   const handleOnClick = (e) => {
@@ -15,7 +14,7 @@ const BoxButton = ({
   return (
     <button
       type='button'
-      className={`${Styles.boxButton} ${Styles[theme]} ${Styles[size]}`}
+      className={`${Styles.boxButton} ${Styles[theme]}`}
       disabled={state === 'inactive' ? true : false}
       onClick={handleOnClick}
     >
