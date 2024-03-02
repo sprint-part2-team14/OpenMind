@@ -8,7 +8,7 @@ const PageNation = ({ state = 'active' }) => {
   return (
     <button
       type='button'
-      className={`${Styles[state]}`}
+      className={`${Styles.button} ${Styles[state]}`}
       disabled={state === 'inactive' ? true : false}
       onClick={handleOnClick}>
       1

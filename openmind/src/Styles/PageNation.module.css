@@ -1,4 +1,4 @@
-Button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,12 +21,12 @@ Button {
   color: var(--brown40);
 }
 
-Button:hover {
+.button:hover {
   color: var(--gray60);
 }
 
 @media (max-width: 767px) {
-  Button {
+  .button {
     width: 3rem;
     height: 3rem;
     font-size: var(--body3);
