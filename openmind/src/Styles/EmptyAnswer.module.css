@@ -31,13 +31,9 @@
 .username {
   font-family: Actor;
   font-size: 1.4rem;
-  font-style: normal;
   font-weight: 400;
   line-height: 1.8rem;
   color: var(--gray60);
-  font-feature-settings:
-    'clig' off,
-    'liga' off;
 
   @media (min-width: 768px) {
     font-size: 1.8rem;
@@ -72,13 +68,9 @@
   top: 16px;
   font-family: Pretendard;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 400;
   line-height: 2.2rem;
   color: var(--gray40);
-  font-feature-settings:
-    'clig' off,
-    'liga' off;
 }
 
 .answerButton {
@@ -92,14 +84,10 @@
   background: var(--brown30);
   font-family: Pretendard;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 400;
   line-height: 2.2rem;
   color: var(--gray10);
   border-radius: 8px;
-  font-feature-settings:
-    'clig' off,
-    'liga' off;
 }
 
 .answerButton:hover {
