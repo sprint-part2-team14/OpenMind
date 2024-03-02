@@ -9,7 +9,7 @@ const PageNation = ({ state = 'active' }) => {
     <button
       type='button'
       className={`${Styles[state]}`}
-      disabled={state === 'active' ? true : false}
+      disabled={state === 'inactive' ? true : false}
       onClick={handleOnClick}>
       1
     </button>
