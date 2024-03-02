@@ -8,7 +8,7 @@
   align-items: center;
   gap: 0.4rem;
   border-radius: 8px;
-  border: 1px solid var(--brown40);
+  border: 1px solid var(--gray40);
   background: var(--gray10);
 }
 
