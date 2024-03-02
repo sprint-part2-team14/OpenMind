@@ -12,7 +12,4 @@
   line-height: 1.8rem;
   color: var(--gray10);
   border-radius: 8px;
-  font-feature-settings:
-    'clig' off,
-    'liga' off;
 }
