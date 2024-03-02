@@ -1,20 +1,21 @@
-.likeReaction, .dislikeReaction {
+.likeReaction,
+.dislikeReaction {
   display: inline-flex;
-  align-items: center;
   gap: 6px;
+  align-items: center;
   color: var(--gray40);
 }
 
 .clickLikeReaction {
   display: inline-flex;
-  align-items: center;
   gap: 6px;
+  align-items: center;
   color: var(--blue50);
 }
 
 .clickDislikeReaction {
   display: inline-flex;
-  align-items: center;
   gap: 6px;
+  align-items: center;
   color: var(--gray60);
 }

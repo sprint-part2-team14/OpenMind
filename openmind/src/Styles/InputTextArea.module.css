@@ -1,19 +1,17 @@
-@import './Css/Global.css';
-
 .input {
   display: flex;
+  gap: 1rem;
+  padding: 1.6rem;
   width: 33.6rem;
   height: 14rem;
-  padding: 1.6rem;
-  gap: 1rem;
-  border-radius: 8px;
   background: var(--gray20);
-  color: var(--gray60);
   font-family: Pretendard;
   font-size: var(--body3);
   font-weight: 400;
   line-height: 2.2rem;
+  color: var(--gray60);
   text-align: start;
+  border-radius: 8px;
 }
 
 input::placeholder {

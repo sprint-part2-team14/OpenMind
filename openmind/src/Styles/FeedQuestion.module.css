@@ -1,31 +1,29 @@
 .questionArea {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 0.4rem;
+  align-items: flex-start;
   flex: 1 0 0;
+  flex-direction: column;
 }
 
 .infoGroup {
-  color: var(--gray40);
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: Pretendard;
   font-size: 1.4rem;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.8rem;
+  color: var(--gray40);
 }
 
 .question {
-  color: var(--gray60);
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: Actor;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 400;
   line-height: 2.2rem;
+  color: var(--gray60);
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .question {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }

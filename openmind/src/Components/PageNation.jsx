@@ -1,14 +1,14 @@
 import Styles from '../Styles/PageNation.module.css';
 
 const PageNation = ({ state = 'active' }) => {
-  const handleOnClick = e => {
+  const handleOnClick = () => {
     //(!state)를 활용한 토글 형식 구현
   };
 
   return (
     <button
       type='button'
-      className={`${Styles[state]}`}
+      className={`${Styles.button} ${Styles[state]}`}
       disabled={state === 'inactive' ? true : false}
       onClick={handleOnClick}>
       1

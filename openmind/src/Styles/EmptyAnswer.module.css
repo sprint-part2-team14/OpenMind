@@ -1,101 +1,99 @@
 .container {
   display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
   flex-direction: row;
   width: 59.2rem;
-  align-items: flex-start;
-  gap: 1.2rem;
 }
 
 .profile {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   width: 3.2rem;
   height: 3.2rem;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-
-  @media (min-width: 768px) {
-    width: 4.8rem;
-    height: 4.8rem;
-  }
 }
 
 .answerArea {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 0.4rem;
+  align-items: flex-start;
   flex: 1 0 0;
+  flex-direction: column;
 }
 
 .username {
-  color: var(--gray60);
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: Actor;
   font-size: 1.4rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: 1.8rem; 
+  line-height: 1.8rem;
+  color: var(--gray60);
+}
 
-  @media (min-width: 768px) {
+.answerBox {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+.answerInput {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding: 1.6rem;
+  position: relative;
+  height: 18.6rem;
+  background: var(--gray20);
+  border-radius: 8px;
+}
+
+.answerInput::placeholder {
+  align-self: stretch;
+  position: absolute;
+  top: 16px;
+  font-family: Pretendard;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--gray40);
+}
+
+.answerButton {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding: 1.2rem 2.4rem;
+  height: 4.6rem;
+  background: var(--brown30);
+  font-family: Pretendard;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--gray10);
+  border-radius: 8px;
+}
+
+.answerButton:hover {
+  background: var(--brown40);
+}
+
+@media (min-width: 768px) {
+  .username {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
 }
 
-.answerBox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.8rem;
-  align-self: stretch;
-}
-
-.answerInput {
-  position: relative;
-  display: flex;
-  height: 18.6rem;
-  padding: 1.6rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.1rem;
-  align-self: stretch;
-  border-radius: 8px;
-  background: var(--gray20);
-}
-
-.answerInput::placeholder {
-  position: absolute;
-  top: 16px;
-  align-self: stretch;
-  color: var(--gray40);
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Pretendard;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.2rem;
-}
-
-.answerButton {
-  display: flex;
-  height: 4.6rem;
-  padding: 1.2rem 2.4rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.1rem;
-  align-self: stretch;
-  border-radius: 8px;
-  background: var(--brown30);
-  color: var(--gray10);
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Pretendard;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.2rem;
-}
-
-.answerButton:hover {
-  background: var(--brown40);
+@media (min-width: 768px) {
+  .profile {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
 }

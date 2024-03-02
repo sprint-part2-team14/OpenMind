@@ -1,15 +1,13 @@
-@import './Css/Global.css';
-
 .container {
   display: flex;
-  width: 33.6rem;
-  padding: 1.2rem 1.6rem;
-  justify-content: center;
-  align-items: center;
   gap: 0.4rem;
-  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1.6rem;
   border: 1px solid var(--gray40);
+  width: 33.6rem;
   background: var(--gray10);
+  border-radius: 8px;
 }
 
 .icon {
@@ -20,11 +18,11 @@
 
 .input {
   flex: 1 0 0;
-  color: var(--gray60);
   font-family: Pretendard;
   font-size: var(--body3);
   font-weight: 400;
   line-height: 2.2rem;
+  color: var(--gray60);
 }
 
 input::placeholder {
