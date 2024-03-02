@@ -1,13 +1,10 @@
-/* styles.module.css */
-@import './Css/Global.css';
-
 .userCard {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-shrink: 0;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.6rem;
   border: 1px solid var(--gray40);
   width: 22rem;
   height: 18.7rem;
@@ -23,16 +20,16 @@
 }
 
 .image {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 60px;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 48px;
 }
 
 .profileContext {
   font-family: Actor;
-  font-size: var(--body1);
+  font-size: var(--body2);
   font-weight: 400;
-  line-height: 2.5rem;
+  line-height: 2.4rem;
   color: var(--gray60);
 }
 
@@ -51,42 +48,43 @@
 }
 
 .icon {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
   opacity: 0.5;
 }
 
 .receiveFeed {
-  font-size: var(--body3);
+  font-size: var(--caption);
   font-weight: 400;
-  line-height: 2.2rem;
+  line-height: 1.8rem;
   color: var(--gray40);
 }
 
 /* 모바일 스타일 */
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .userCard {
-    padding: 1.6rem;
+    padding: 2rem;
   }
 
   .image {
-    width: 4.8rem;
-    height: 4.8rem;
-    border-radius: 48px;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 60px;
   }
 
   .profileContext {
-    font-size: var(--body2);
-    line-height: 2.4rem;
+    font-size: var(--body1);
+    line-height: 2.5rem;
   }
 
   .icon {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.8rem;
+    height: 1.8rem;
   }
 
   .receiveFeed {
-    font-size: var(--caption);
-    line-height: 1.8rem;
+    font-size: var(--body3);
+
+    line-height: 2.2rem;
   }
 }

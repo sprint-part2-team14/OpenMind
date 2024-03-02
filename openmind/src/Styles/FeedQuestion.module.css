@@ -20,8 +20,10 @@
   font-weight: 400;
   line-height: 2.2rem;
   color: var(--gray60);
+}
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .question {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }

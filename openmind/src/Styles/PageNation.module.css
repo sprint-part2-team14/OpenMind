@@ -4,10 +4,10 @@
   justify-content: center;
   flex-shrink: 0;
   flex-direction: column;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   font-family: Actor;
-  font-size: var(--body1);
+  font-size: var(--body3);
   font-weight: 400;
   line-height: 2.5rem;
   text-align: center;
@@ -25,10 +25,10 @@
   color: var(--gray60);
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .button {
-    width: 3rem;
-    height: 3rem;
-    font-size: var(--body3);
+    width: 4rem;
+    height: 4rem;
+    font-size: var(--body1);
   }
 }
