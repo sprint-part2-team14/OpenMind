@@ -1,0 +1,35 @@
+@import './Css/Global.css';
+
+Button {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Actor;
+  font-size: var(--body1);
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.default {
+  color: var(--gray40);
+}
+
+.active {
+  color: var(--brown40);
+}
+
+Button:hover {
+  color: var(--gray60);
+}
+
+@media (max-width: 767px) {
+  Button {
+    width: 3rem;
+    height: 3rem;
+    font-size: var(--body3);
+  }
+}
