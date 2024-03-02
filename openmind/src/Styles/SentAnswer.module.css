@@ -1,18 +1,18 @@
 .container {
   display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
   flex-direction: row;
   width: 59.2rem;
-  align-items: flex-start;
-  gap: 1.2rem;
 }
 
 .profile {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   width: 3.2rem;
   height: 3.2rem;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 
   @media (min-width: 768px) {
     width: 4.8rem;
@@ -22,27 +22,29 @@
 
 .answerArea {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 0.4rem;
+  align-items: flex-start;
   flex: 1 0 0;
+  flex-direction: column;
 }
 
 .infoGroup {
   display: flex;
-  align-items: center;
   gap: 0.8rem;
+  align-items: center;
   flex: 1 0 0;
 }
 
 .username {
-  color: var(--gray60);
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: Actor;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.8rem; 
+  line-height: 1.8rem;
+  color: var(--gray60);
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
 
   @media (min-width: 768px) {
     font-size: 1.8rem;
@@ -51,22 +53,26 @@
 }
 
 .createdAt {
-  color: var(--gray40);
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: Pretendard;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.8rem; 
+  line-height: 1.8rem;
+  color: var(--gray40);
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
 }
 
 .answer {
-  color: var(--gray60);
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: Pretendard;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2.2rem;
-  word-break: break-all; 
+  color: var(--gray60);
+  word-break: break-all;
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
 }

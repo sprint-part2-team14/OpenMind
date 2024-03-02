@@ -6,11 +6,7 @@ const FloatingButton = () => {
     console.log(1);
   };
   return (
-    <button
-      type='button'
-      className={Styles.floatingButton}
-      onClick={handleOnClick}
-    >
+    <button type='button' className={Styles.floatingButton} onClick={handleOnClick}>
       질문 작성하기
     </button>
   );

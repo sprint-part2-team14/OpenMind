@@ -1,25 +1,25 @@
 .container {
   display: flex;
-  width: 68.4rem;
-  padding: 2.4rem;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 2.4rem;
-  border-radius: 16px;
-  background: var(--gray10);
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2.4rem;
   box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(140, 140, 140, 0.25);
+  width: 68.4rem;
+  background: var(--gray10);
+  border-radius: 16px;
 
   @media (min-width: 768px) {
-    padding: 3.2rem;
     gap: 3.2rem;
+    padding: 3.2rem;
   }
 }
 
 .nav {
   display: flex;
+  justify-content: space-between;
   width: 63.6rem;
   height: 2.6rem;
-  justify-content: space-between;
 
   @media (min-width: 768px) {
     width: 62rem;
@@ -28,16 +28,16 @@
 
 .statusBadge {
   display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid #542f1a;
   width: 7.6rem;
   height: 2.6rem;
-  padding: 0.4rem 1.2rem;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  background: #fff;
+  color: #542f1a;
   border-radius: 8px;
-  border: 1px solid #542F1A;
-  background:#FFF;
-  color: #542F1A;
 }
 
 .kebab {
@@ -46,7 +46,7 @@
 }
 
 .line {
-  height: 0.1rem;
   align-self: stretch;
+  height: 0.1rem;
   background: var(--gray30);
 }

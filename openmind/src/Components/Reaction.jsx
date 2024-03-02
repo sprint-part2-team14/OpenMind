@@ -1,4 +1,4 @@
-import {QuestionReaction} from './QuestionReaction';
+import { QuestionReaction } from './QuestionReaction';
 
 // 기본
 // 1.type이
@@ -21,16 +21,16 @@ import {QuestionReaction} from './QuestionReaction';
 // 6.좋아요, 싫어요 취소시(한번 누르면 +1, 한번 더 누르면 -1)
 // api에 get 요청후 like,dislike 값을 받아오고 거기서 -1 해서 다시 post 보내기
 
-// 7.좋아요 싫어요에 is_active 속성을 주고 로컬스토리지에 저장하여 
-// like가 is_active면 dislike버튼 비활성화 처리 반대도 마찬가지, 
+// 7.좋아요 싫어요에 is_active 속성을 주고 로컬스토리지에 저장하여
+// like가 is_active면 dislike버튼 비활성화 처리 반대도 마찬가지,
 // 좋아요 취소시 로컬스토리지에서 is_active 삭제
 
 const Reaction = () => {
   return (
     <>
       <div>
-        <QuestionReaction type="like" />
-        <QuestionReaction type="dislike" />
+        <QuestionReaction type='like' />
+        <QuestionReaction type='dislike' />
       </div>
     </>
   );

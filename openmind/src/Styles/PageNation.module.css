@@ -1,17 +1,16 @@
-@import './Css/Global.css';
-
 Button {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-direction: column;
   width: 4rem;
   height: 4rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   font-family: Actor;
   font-size: var(--body1);
   font-weight: 400;
   line-height: 2.5rem;
+  text-align: center;
 }
 
 .default {

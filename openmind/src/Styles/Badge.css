@@ -1,11 +1,9 @@
-@import './Css/Global.css';
-
 .Badge-Border {
   display: inline-flex;
-  padding: 0.4rem 1.2rem;
-  justify-content: center;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.2rem;
 }
 
 .Badge-Context {
@@ -18,15 +16,15 @@
 }
 
 .Badge-Brown {
-  border-radius: 8px;
   border: 1px solid var(--brown40);
   background: var(--gray10);
+  border-radius: 8px;
 }
 
 .Badge-Gray {
-  border-radius: 8px;
   border: 1px solid var(--gray40);
   background: var(--gray10);
+  border-radius: 8px;
 }
 
 .Badge-Color-Brown {
