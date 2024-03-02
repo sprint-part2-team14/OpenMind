@@ -1,12 +1,12 @@
-import styles from "../Styles/FeedQuestion.module.css"
+import Styles from "../Styles/FeedQuestion.module.css"
 
 const FeedQuestion = ({ type, createdAt, children } ) => {
   return (
-    <div className={styles.questionArea}>
-      <div className={styles.infoGroup}>
+    <div className={Styles.questionArea}>
+      <div className={Styles.infoGroup}>
         {type} · {createdAt}
       </div>
-      <div className={styles.question}>
+      <div className={Styles.question}>
         {children}
       </div>
     </div>
