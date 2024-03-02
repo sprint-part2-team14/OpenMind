@@ -1,7 +1,7 @@
 import Styles from '../Styles/PageNation.module.css';
 
 const PageNation = ({ state = 'active' }) => {
-  const handleOnClick = e => {
+  const handleOnClick = () => {
     //(!state)를 활용한 토글 형식 구현
   };
 
