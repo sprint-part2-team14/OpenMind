@@ -1,4 +1,4 @@
-import Styles from "../Styles/RejectAnswer.module.css"
+import Styles from '../Styles/RejectAnswer.module.css';
 
 const RejectAnswer = ({ profileImg, username, createdAt }) => {
   return (
@@ -12,7 +12,7 @@ const RejectAnswer = ({ profileImg, username, createdAt }) => {
         <div className={Styles.answer}>답변 거절</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default RejectAnswer;

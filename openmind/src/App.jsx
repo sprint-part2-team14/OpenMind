@@ -1,12 +1,7 @@
-import InputField from './Components/InputField';
+import '../src/Styles/Css/Global.css';
 
-const App = () => {
-  return (
-    // eslint-disable-next-line react/react-in-jsx-scope
-    <div className='App'>
-      <InputField />
-    </div>
-  );
-};
+function App() {
+  return <div className='App'></div>;
+}
 
 export default App;

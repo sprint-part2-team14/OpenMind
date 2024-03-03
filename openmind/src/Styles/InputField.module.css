@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid var(--gray40);
+  width: 33.6rem;
+  background: var(--gray10);
+  border-radius: 8px;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+}
+
+.input {
+  flex: 1 0 0;
+  font-family: Pretendard;
+  font-size: var(--body3);
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--gray60);
+}
+
+input::placeholder {
+  color: var(--gray40);
+}

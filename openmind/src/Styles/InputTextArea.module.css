@@ -1,0 +1,23 @@
+.input {
+  display: flex;
+  gap: 1rem;
+  padding: 1.6rem;
+  width: 33.6rem;
+  height: 14rem;
+  background: var(--gray20);
+  font-family: Pretendard;
+  font-size: var(--body3);
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--gray60);
+  text-align: start;
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: var(--gray40);
+}
+
+.input:focus {
+  box-shadow: inset 0 0 0 0.1rem var(--brown40);
+}

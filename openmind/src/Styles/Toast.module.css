@@ -1,16 +1,15 @@
 .toast {
   display: inline-flex;
-  padding: 1.2rem 2rem;
-  justify-content: center;
   align-items: center;
-  border-radius: 8px;
-  background: var(--gray60);
+  justify-content: center;
+  padding: 1.2rem 2rem;
   box-shadow: var(--shadow2pt);
-  color: var(--gray10);
-  font-feature-settings: 'clig' off, 'liga' off;
+  background: var(--gray60);
   font-family: Pretendard;
   font-size: var(--caption);
   font-style: normal;
   font-weight: 500;
   line-height: 1.8rem;
+  color: var(--gray10);
+  border-radius: 8px;
 }
