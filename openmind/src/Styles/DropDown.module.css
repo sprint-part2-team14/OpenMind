@@ -1,0 +1,71 @@
+
+.dropDown{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7.9rem;
+  gap: 0.4rem;
+}
+
+.dropBtn {
+  display: flex;
+  padding: 0.8rem 1.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--gray40);
+  background: var(--gray10);
+  flex: 1 0 0;
+  color: var(--gray40);
+  font-size: var(--caption);
+  font-weight: 500;
+  line-height: 1.8rem; /* 128.571% */
+}
+.dropDown:hover .dropList {
+  display: flex;
+}
+.dropDown:hover .dropBtn{
+  color: var(--gray60);
+  border: 1px solid var(--gray60);
+}
+.arrowUp {
+  display: none;
+}
+.arrowDown {
+  display: block;
+}
+.dropDown:hover .arrowUp {
+  display: block;
+}
+.dropDown:hover .arrowDown {
+  display: none;
+}
+.dropList{
+  display: none;
+  padding: 0.4rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--gray30);
+  background: var(--gray10);
+  box-shadow: var(--shadow1pt);
+}
+
+.dropList p{
+  display: flex;
+  padding: 0.6rem 1.6rem;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  background: var(--gray10);;
+  flex: 1 0 0;
+  color: var(--gray60);
+  font-size: var(--caption);
+  font-weight: 500;
+  line-height: 1.8rem; /* 128.571% */
+}
