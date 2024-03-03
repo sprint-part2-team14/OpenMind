@@ -50,6 +50,7 @@
   height: 18.6rem;
   background: var(--gray20);
   border-radius: 8px;
+  max-width: 20rem;
 }
 
 .answerInput::placeholder {
@@ -78,6 +79,7 @@
   line-height: 2.2rem;
   color: var(--gray10);
   border-radius: 8px;
+  max-width: 20rem;
 }
 
 .answerButton:hover {
@@ -95,5 +97,17 @@
   .profile {
     width: 4.8rem;
     height: 4.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .answerButton {
+    max-width: 54.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .answerInput {
+    max-width: 54.8rem;
   }
 }

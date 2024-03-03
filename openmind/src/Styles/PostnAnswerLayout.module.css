@@ -1,0 +1,171 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerImage {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90.6rem;
+  height: 17.7rem;
+  flex-shrink: 0;
+}
+
+.logo {
+  position: absolute;
+  bottom: 10rem;
+  display: flex;
+  width: 12.4rem;
+  height: 4.9rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.main {
+  background: var(--gray20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.profileArea {
+  position: relative;
+}
+
+.profileGroup {
+  position: absolute;
+  bottom: -12rem;
+  right: -7.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  z-index: 10;
+}
+
+.profileImage {
+  display: flex;
+  width: 10.4rem;
+  height: 10.4rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.username {
+  color: var(--gray60);
+  font-family: Pretendard;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.feedContainer {
+  display: flex;
+  width: 32.7rem;
+  padding: 1.6rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 16px;
+  border: 1px solid var(--brown20);
+  background: var(--brown10);
+  margin-top: 16rem;
+}
+
+.questionInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.messageIcon {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.infoText {
+  color: var(--brown40);
+  font-family: Actor;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.questionArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .questionArea {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .headerImage {
+    width: 120rem;
+    height: 23.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    bottom: 13rem;
+    width: 17rem;
+    height: 6.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .profileGroup {
+    bottom: -13rem;
+    right: -9.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .profileImage {
+    width: 13.6rem;
+    height: 13.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .username {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .feedContainer {
+    width: 70.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .messageIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .infoText {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}

@@ -4,7 +4,7 @@ import { ReactComponent as ThumbsDown } from '../Assets/Icon/iconThumbsDown.svg'
 import { ReactComponent as ThumbsUp } from '../Assets/Icon/iconThumbsUp.svg';
 import Styles from '../Styles/Reaction.module.css';
 
-import { ReactionAPI } from './ReactionAPI';
+import { ReactionAPI } from '../Utils/ReactionAPI';
 
 export function QuestionReaction({ type }) {
   const [like, setLike] = useState(null);
@@ -31,12 +31,12 @@ export function QuestionReaction({ type }) {
   const stop = () => {};
 
   return (
-    <div>
+    <div className={Styles.container}>
       {type === 'like' && (
         <div
           className={like ? Styles.clickLikeReaction : Styles.likeReaction}
           onClick={like ? stop : () => handleReaction()}>
-          <ThumbsUp fill={like ? `var(--blue50)` : `var(--gray40)`} />
+          <ThumbsUp fill={like ? 'var(--blue50)' : 'var(--gray40)'} />
           <p>좋아요</p>
           <p>{like}</p>
         </div>
@@ -45,7 +45,7 @@ export function QuestionReaction({ type }) {
         <div
           className={dislike ? Styles.clickDislikeReaction : Styles.likeReaction}
           onClick={dislike ? stop : () => handleReaction()}>
-          <ThumbsDown fill={dislike ? `var(--gray60)` : `var(--gray40)`} />
+          <ThumbsDown fill={dislike ? 'var(--gray60)' : 'var(--gray40)'} />
           <p>싫어요</p>
           <p>{dislike}</p>
         </div>

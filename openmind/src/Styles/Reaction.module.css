@@ -1,21 +1,26 @@
+.container {
+  display: inline-flex;
+  flex-direction: row;
+}
+
 .likeReaction,
 .dislikeReaction {
   display: inline-flex;
-  gap: 6px;
+  gap: 0.6rem;
   align-items: center;
   color: var(--gray40);
 }
 
 .clickLikeReaction {
   display: inline-flex;
-  gap: 6px;
+  gap: 0.6rem;
   align-items: center;
   color: var(--blue50);
 }
 
 .clickDislikeReaction {
   display: inline-flex;
-  gap: 6px;
+  gap: 0.6rem;
   align-items: center;
   color: var(--gray60);
 }
