@@ -39,7 +39,6 @@
 }
 
 .createdAt {
-  font-family: Pretendard;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
@@ -47,7 +46,6 @@
 }
 
 .answer {
-  font-family: Pretendard;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
@@ -60,9 +58,6 @@
     width: 4.8rem;
     height: 4.8rem;
   }
-}
-
-@media (min-width: 768px) {
   .username {
     font-size: 1.8rem;
     line-height: 2.4rem;

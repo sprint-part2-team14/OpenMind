@@ -40,7 +40,6 @@
 }
 
 .createdAt {
-  font-family: Pretendard;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
@@ -48,7 +47,6 @@
 }
 
 .answer {
-  font-family: Pretendard;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
@@ -62,29 +60,17 @@
   .container {
     max-width: 59.2rem;
   }
-}
-
-@media (min-width: 768px) {
   .profile {
     width: 4.8rem;
     height: 4.8rem;
   }
-}
-
-@media (min-width: 768px) {
   .username {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
-}
-
-@media (min-width: 768px) {
   .answerArea {
     max-width: 54.8rem;
   }
-}
-
-@media (min-width: 768px) {
   .answer {
     max-width: 54.8rem;
   }

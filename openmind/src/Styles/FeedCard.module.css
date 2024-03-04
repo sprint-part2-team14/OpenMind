@@ -4,17 +4,11 @@
   align-items: flex-start;
   flex-direction: column;
   padding: 2.4rem;
-  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(140, 140, 140, 0.25);
+  box-shadow: var(--shadow1pt);
   width: 29.5rem;
-  height: auto;
+  height: 100%;
   background: var(--gray10);
   border-radius: 16px;
-
-  @media (min-width: 768px) {
-    width: 68.4rem;
-    gap: 3.2rem;
-    padding: 3.2rem;
-  }
 }
 
 .nav {
@@ -22,10 +16,6 @@
   justify-content: space-between;
   width: 24.7rem;
   height: 2.6rem;
-
-  @media (min-width: 768px) {
-    width: 63.6rem;
-  }
 }
 
 .kebab {
@@ -37,4 +27,17 @@
   align-self: stretch;
   height: 0.1rem;
   background: var(--gray30);
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 68.4rem;
+    gap: 3.2rem;
+    padding: 3.2rem;
+  }
+
+  .nav {
+    width: 63.6rem;
+  }
 }

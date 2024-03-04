@@ -11,7 +11,6 @@
   align-items: center;
   width: 90.6rem;
   height: 17.7rem;
-  flex-shrink: 0;
 }
 
 .logo {
@@ -22,7 +21,6 @@
   height: 4.9rem;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .main {
@@ -61,7 +59,6 @@
 
 .username {
   color: var(--gray60);
-  font-family: Pretendard;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 3rem;
@@ -97,7 +94,7 @@
 .infoText {
   color: var(--brown40);
   font-family: Actor;
-  font-size: 1.8rem;
+  font-size: var(--body2);
   font-weight: 400;
   line-height: 2.4rem;
 }
@@ -112,58 +109,34 @@
   .questionArea {
     gap: 2rem;
   }
-}
-
-@media (min-width: 768px) {
   .headerImage {
     width: 120rem;
     height: 23.4rem;
   }
-}
-
-@media (min-width: 768px) {
   .logo {
     bottom: 13rem;
     width: 17rem;
     height: 6.7rem;
   }
-}
-
-@media (min-width: 768px) {
   .profileGroup {
     bottom: -13rem;
     right: -9.5rem;
   }
-}
-
-@media (min-width: 768px) {
   .profileImage {
     width: 13.6rem;
     height: 13.6rem;
   }
-}
-
-@media (min-width: 768px) {
   .username {
     font-size: 3.2rem;
     line-height: 4rem;
   }
-}
-
-@media (min-width: 768px) {
   .feedContainer {
     width: 70.4rem;
   }
-}
-
-@media (min-width: 768px) {
   .messageIcon {
     width: 2.4rem;
     height: 2.4rem;
   }
-}
-
-@media (min-width: 768px) {
   .infoText {
     font-size: 2rem;
     line-height: 2.5rem;

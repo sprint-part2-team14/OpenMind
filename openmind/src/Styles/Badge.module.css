@@ -10,7 +10,6 @@
 
 .context {
   display: flex;
-  font-family: Pretendard;
   font-size: var(--caption);
   font-style: normal;
   font-weight: 500;
