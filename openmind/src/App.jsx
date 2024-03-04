@@ -12,11 +12,10 @@ function App() {
         <Route index element={<MainPage />} />
         <Route path='list'>
           <Route index element={<ListPage />} />
-          <Route path=':id' element={<AnswerPage />} />
-        </Route>
-        <Route path='post'>
-          <Route path=':id' element={<PostPage />} />
-          <Route path=':id/answer' element={<PostPage />} />
+          <Route path='/post'>
+            <Route path=':id' element={<PostPage />} />
+            <Route path=':id/answer' element={<AnswerPage />} />
+          </Route>
         </Route>
       </Route>
     </Routes>
