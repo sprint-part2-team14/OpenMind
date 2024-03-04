@@ -1,4 +1,4 @@
-export function DropDownMake(data){
+export function DropDownMakeData(data){
   const make = () => {
     const result = [];
     for(let i = 0; i < data.length; i++){
