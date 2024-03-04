@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const baseUrl = 'https://openmind-api.vercel.app/';
+const baseUrl = 'https://openmind-api.vercel.app/4-14/';
 
 const getRequest = async endpoint => {
   try {
