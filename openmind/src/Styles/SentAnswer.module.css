@@ -3,7 +3,7 @@
   gap: 1.2rem;
   align-items: flex-start;
   flex-direction: row;
-  width: 59.2rem;
+  max-width: 24.4rem;
 }
 
 .profile {
@@ -21,6 +21,7 @@
   align-items: flex-start;
   flex: 1 0 0;
   flex-direction: column;
+  max-width: 20rem;
 }
 
 .infoGroup {
@@ -39,7 +40,6 @@
 }
 
 .createdAt {
-  font-family: Pretendard;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
@@ -47,24 +47,31 @@
 }
 
 .answer {
-  font-family: Pretendard;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
   color: var(--gray60);
   word-break: break-all;
+  align-self: stretch;
+  max-width: 20rem;
 }
 
 @media (min-width: 768px) {
+  .container {
+    max-width: 59.2rem;
+  }
   .profile {
     width: 4.8rem;
     height: 4.8rem;
   }
-}
-
-@media (min-width: 768px) {
   .username {
     font-size: 1.8rem;
     line-height: 2.4rem;
+  }
+  .answerArea {
+    max-width: 54.8rem;
+  }
+  .answer {
+    max-width: 54.8rem;
   }
 }

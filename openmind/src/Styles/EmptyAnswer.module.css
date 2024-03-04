@@ -50,13 +50,13 @@
   height: 18.6rem;
   background: var(--gray20);
   border-radius: 8px;
+  max-width: 20rem;
 }
 
 .answerInput::placeholder {
   align-self: stretch;
   position: absolute;
   top: 16px;
-  font-family: Pretendard;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
@@ -72,12 +72,12 @@
   padding: 1.2rem 2.4rem;
   height: 4.6rem;
   background: var(--brown30);
-  font-family: Pretendard;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
   color: var(--gray10);
   border-radius: 8px;
+  max-width: 20rem;
 }
 
 .answerButton:hover {
@@ -89,11 +89,14 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
-}
-
-@media (min-width: 768px) {
   .profile {
     width: 4.8rem;
     height: 4.8rem;
+  }
+  .answerButton {
+    max-width: 54.8rem;
+  }
+  .answerInput {
+    max-width: 54.8rem;
   }
 }
