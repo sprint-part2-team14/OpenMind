@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 
 import  ARROWDOWN  from "../Assets/Icon/iconArrowDown.svg";
 import  ARROWUP  from "../Assets/Icon/iconArrowUp.svg";
@@ -40,5 +40,3 @@ const DropDownList = () => {
 };
 
 export default DropDownList;
-
- 

@@ -1,4 +1,4 @@
-export function DropDownMakeData(data){
+const DropDownMakeData = (data) => {
   const make = () => {
     const result = [];
     for(let i = 0; i < data.length; i++){
@@ -22,3 +22,5 @@ export function DropDownMakeData(data){
     </>
   );
 }
+
+export default DropDownMakeData;
