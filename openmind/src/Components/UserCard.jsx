@@ -8,7 +8,7 @@ const UserCard = ({ id, name, imageSource, questionCount}) => {
     const navigate = useNavigate();
 
     return () => {
-      navigate(`/post/${id}/answer`);
+      navigate(`/post/${id}`);
     };
   };
 
