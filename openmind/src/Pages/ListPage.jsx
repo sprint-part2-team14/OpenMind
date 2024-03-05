@@ -4,6 +4,7 @@ import { getPostIdRequest } from '../Utils/API';
 import BoxButton from '../Components/BoxButton';
 import LOGO from '../Assets/Images/imageLogo.svg';
 import DropDown from '../Components/DropDown';
+import Styles from '../Styles/ListPage.module.css';
 
 // 오픈마인드 로고를 클릭하면 “/” 페이지로 이동
 //현재 페이지, 정렬 순서를 설정해서 카드 리스트 조회 요청
@@ -29,13 +30,17 @@ const ListPage = () => {
   console.log(user);
 
   return (
-    <div>
-      <a href='/'>
-        <img src={LOGO} alt='로고 이미지' />
-      </a>
-      <BoxButton theme='outline' state='default' text='답변하러 가기' />
-      <h2>누구에게 질문할까요?</h2>
-      <DropDown />
+    <div className={Styles.container}>
+      <div className={Styles.headerGroup}>
+        <a href='/'>
+          <img className={Styles.logo} src={LOGO} alt='로고 이미지' />
+        </a>
+        <BoxButton className={Styles.boxButton} theme='outline' state='default' text='답변하러 가기' />
+      </div>
+      <div>
+        <h2>누구에게 질문할까요?</h2>
+        <DropDown />
+      </div>
       {user?.map(i => (
         <UserCardMobile
           key={i.id}
