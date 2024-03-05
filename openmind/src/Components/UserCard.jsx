@@ -1,8 +1,16 @@
 import ICON_MESSAGE from '../Assets/Icon/iconMessages.svg';
 import Styles from '../Styles/UserCard.module.css';
 
-const UserCardMobile = ({ apidata }) => {
-  const { imageSource, name, questionCount } = apidata;
+const UserCard = ({ apiData }) => {
+  const { id, imageSource, name, questionCount } = apiData;
+  
+  const handleCardClick = () => {
+    const navigate = useNavigate();
+
+    return () => {
+      navigate('/');
+    };
+  };
 
   return (
     <div className={Styles.userCard}>
@@ -21,4 +29,4 @@ const UserCardMobile = ({ apidata }) => {
   );
 };
 
-export default UserCardMobile;
+export default UserCard;
