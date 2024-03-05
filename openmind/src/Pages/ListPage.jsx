@@ -27,6 +27,9 @@ const ListPage = () => {
 
   return (
     <div>
+      <a href='/'>
+        <img src='./Assets/imageLogo' alt='로고 이미지' />
+      </a>
       {user?.map(i => (
         <UserCardMobile
           key={i.id}
@@ -34,7 +37,6 @@ const ListPage = () => {
           name={i.name}
           imageSource={i.imageSource}
           questionCount={i.questionCount}
-          createdAt={i.createdAt}
         />
       ))}
     </div>
