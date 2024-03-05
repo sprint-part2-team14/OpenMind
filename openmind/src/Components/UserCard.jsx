@@ -1,14 +1,14 @@
 import ICON_MESSAGE from '../Assets/Icon/iconMessages.svg';
 import Styles from '../Styles/UserCard.module.css';
+import {useNavigate} from 'react-router-dom';
 
-const UserCard = ({ apiData }) => {
-  const { id, imageSource, name, questionCount } = apiData;
+const UserCard = ({ id, name, imageSource, questionCount}) => {
   
-  const handleCardClick = () => {
+  const handleOnClick = () => {
     const navigate = useNavigate();
 
     return () => {
-      navigate('/');
+      navigate(`/post/${id}/answer`);
     };
   };
 
