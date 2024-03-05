@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import UserCardMobile from '../Components/UserCard';
 import { getPostIdRequest } from '../Utils/API';
 import BoxButton from '../Components/BoxButton';
+import LOGO from '../Assets/Images/imageLogo.svg';
+import DropDown from '../Components/DropDown';
 
 // 오픈마인드 로고를 클릭하면 “/” 페이지로 이동
 //현재 페이지, 정렬 순서를 설정해서 카드 리스트 조회 요청
@@ -29,9 +31,11 @@ const ListPage = () => {
   return (
     <div>
       <a href='/'>
-        <img src='./Assets/imageLogo' alt='로고 이미지' />
+        <img src={LOGO} alt='로고 이미지' />
       </a>
       <BoxButton theme='outline' state='default' text='답변하러 가기' />
+      <h2>누구에게 질문할까요?</h2>
+      <DropDown />
       {user?.map(i => (
         <UserCardMobile
           key={i.id}
