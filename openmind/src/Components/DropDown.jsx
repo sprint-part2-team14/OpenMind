@@ -1,9 +1,9 @@
-import DropDownList from "./DropDownList";
+import DropDownList from './DropDownList';
 
 const DropDown = () => {
   return (
     <div>
-      <DropDownList/>
+      <DropDownList />
     </div>
   );
 };

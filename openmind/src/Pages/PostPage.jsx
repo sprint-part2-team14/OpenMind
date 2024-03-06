@@ -9,3 +9,8 @@
 //“페이스북 아이콘”을 클릭하면 페이스북으로 공유하는 화면이 보임
 //좋아요, 싫어요는 개수를 표시
 //답변이 거절된 질문은 따로 표시
+const PostPage = () => {
+  return <div>hi</div>;
+};
+
+export default PostPage;
