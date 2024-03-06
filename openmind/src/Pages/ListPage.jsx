@@ -1,6 +1,6 @@
 // 질문 목록 페이지
 
-import FloatingButton from '../Components/FloatingButton';
+import BoxButton from '../Components/BoxButton';
 
 // 오픈마인드 로고를 클릭하면 “/” 페이지로 이동
 //현재 페이지, 정렬 순서를 설정해서 카드 리스트 조회 요청
@@ -12,7 +12,7 @@ import FloatingButton from '../Components/FloatingButton';
 //내부 내용의 위치는 고정하고 좌우 여백만 커짐
 //PC에서 카드 컴포넌트의 너비는 220px
 const ListPage = () => {
-  return <FloatingButton />;
+  return <BoxButton theme='outline' text='답변하러 가기' arrow />;
 };
 
 export default ListPage;
