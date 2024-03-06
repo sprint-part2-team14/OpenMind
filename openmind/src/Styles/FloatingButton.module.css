@@ -14,3 +14,9 @@
   color: var(--gray10);
   border-radius: 200px;
 }
+
+@media (min-width: 768px) {
+  .floatingButton {
+    width: 12.3rem;
+  }
+}
