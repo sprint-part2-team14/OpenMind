@@ -1,6 +1,7 @@
-const axios = require('axios');
+// const axios = require('axios');
+import axios from 'axios';
 
-const baseUrl = 'https://openmind-api.vercel.app/';
+const baseUrl = 'https://openmind-api.vercel.app/4-14/';
 
 const getRequest = async endpoint => {
   try {
@@ -38,5 +39,9 @@ export const getExampleRequest = async () => {
 };
 
 export const postExampleRequest = async () => {
-  return postRequest('/무엇이든지/엔드포인트로', 데이터);
+  return postRequest('/무엇이든지/엔드포인트로', '데이터');
+};
+
+export const getPostIdRequest = async () => {
+  return getRequest('subjects/');
 };
