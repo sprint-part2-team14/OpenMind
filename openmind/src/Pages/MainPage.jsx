@@ -8,10 +8,12 @@ const MainPage = () => {
   return (
     <div className={Styles.body}>
       <div className={Styles.container}>
-        <img className={Styles.logoBox} src={IMAGE_LOGO} alt='메인페이지 로고 ' />
+        <a href='/'>
+          <img className={Styles.logoBox} src={IMAGE_LOGO} alt='메인페이지 로고 ' />
+        </a>
         <Link to='/list?page=1&sort=createdAt'>
           <div className={Styles.headButton}>
-            <BoxButton className={Styles.headButton} theme='outline' state='default' text='질문하러 가기' />
+            <BoxButton className={Styles.headButton} theme='outline' text='질문하러 가기' />
           </div>
         </Link>
         <div className={Styles.inputBox}>

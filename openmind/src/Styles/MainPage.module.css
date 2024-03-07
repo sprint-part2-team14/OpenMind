@@ -27,15 +27,15 @@
 
 .inputBox {
   display: flex;
-  width: 40rem;
 
   gap: 1rem;
   justify-content: center;
   flex-direction: column;
+  margin: 2.4rem auto;
   padding: 3.2rem;
+  width: 40rem;
   background: var(--gray10);
   border-radius: 16px;
-  margin: 2.4rem auto;
 }
 
 @media (max-width: 767px) {
@@ -48,14 +48,11 @@
   }
 
   .headButton {
-    position: static;
-    width: 12.3rem;
-    height: 3.4rem;
     display: flex;
     justify-content: center;
     margin: 10% auto;
-    height: 3.4rem;
     padding: 0.8rem 1.2rem;
+    position: static;
     font-size: var(--caption);
   }
 }
