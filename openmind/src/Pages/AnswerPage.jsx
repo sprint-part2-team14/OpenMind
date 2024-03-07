@@ -31,7 +31,7 @@ const AnswerPage = () => {
 
   return(
     <PostnAnswerLayout name={name} imageSource={imgSource} questionCount={count}>
-      <AnswerFeedCard id={id}/>
+      <AnswerFeedCard id={id} name={name} imageSource={imgSource}/>
     </PostnAnswerLayout>
   );
 };

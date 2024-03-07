@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 import AnswerFeedCardRender from './AnswerFeedCardRender';
 
-const AnswerFeedCard = ({id}) => {
+const AnswerFeedCard = ({id, name, imageSource}) => {
   const [result, setResult] = useState([]);
 
   async function apiGet(){
@@ -15,7 +15,7 @@ const AnswerFeedCard = ({id}) => {
   console.log(result);
 
   return (
-    <AnswerFeedCardRender result={result}/>
+    <AnswerFeedCardRender result={result} name={name} imageSource={imageSource}/>
   );
 };
 
