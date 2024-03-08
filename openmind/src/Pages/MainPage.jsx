@@ -1,4 +1,28 @@
-// 메인페이지
+import BoxButton from '../Components/BoxButton';
+import IMAGE_LOGO from '../Assets/Images/imageLogo.svg';
+import InputField from '../Components/InputField';
+import Styles from '../Styles/MainPage.module.css';
+import { Link } from 'react-router-dom';
 
-// 이름을 입력하고 “질문 받기” 버튼을 클릭하면 피드를 생성
-// 피드 생성 응답을 받으면 응답으로 받은 피드 id를 활용해 “/post/{id}/answer” 페이지로 이동
+const MainPage = () => {
+  return (
+    <div className={Styles.body}>
+      <div className={Styles.container}>
+        <a href='/'>
+          <img className={Styles.logoBox} src={IMAGE_LOGO} alt='메인페이지 로고 ' />
+        </a>
+        <Link to='/list?page=1&sort=createdAt'>
+          <div className={Styles.headButton}>
+            <BoxButton className={Styles.headButton} theme='outline' text='질문하러 가기' />
+          </div>
+        </Link>
+        <div className={Styles.inputBox}>
+          <InputField />
+          <BoxButton />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MainPage;

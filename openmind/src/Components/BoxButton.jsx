@@ -1,20 +1,12 @@
 import { ReactComponent as ArrowToPage } from '../Assets/Icon/iconArrowToPage.svg';
 import Styles from '../Styles/BoxButton.module.css';
 
-const BoxButton = ({ theme = 'fill', state = 'default', text = '질문 받기' }) => {
-  const handleOnClick = () => {
-    // 필요한 방식으로 바꾸세요
-    console.log(1);
-  };
-
+// 화살표 있는 버튼만 프롭으로 arrow 넘겨줄 것
+const BoxButton = ({ theme = 'fill', children, disabled, arrow, ...rest }) => {
   return (
-    <button
-      type='button'
-      className={`${Styles.boxButton} ${Styles[theme]}`}
-      disabled={state === 'inactive' ? true : false}
-      onClick={handleOnClick}>
-      {text}
-      <ArrowToPage className={`${Styles.arrowToPageIcon} ${Styles[theme]}`} />
+    <button className={`${Styles.boxButton} ${Styles[theme]}`} disabled={disabled} {...rest}>
+      {children}
+      {arrow && <ArrowToPage className={`${Styles.arrowToPageIcon} ${Styles[theme]}`} />}
     </button>
   );
 };
