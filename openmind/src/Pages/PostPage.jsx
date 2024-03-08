@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { getSubjectInfo, getSubjectQuestion } from '../Utils/API';
 import PostnAnswerLayout from '../Layout/PostnAnswerLayout';
-import FeedCard from '../Components/FeedCard';
-import FloatingButton from '../Components/FloatingButton';
+import FeedCard from '../Components/FeedCard/FeedCard';
+import FloatingButton from '../Components/Button/FloatingButton';
 
 import Styles from '../Styles/PostPage.module.css';
 import NO_QUESTION from '../Assets/Images/imageNoQuestion.svg';
@@ -95,7 +95,9 @@ const PostPage = () => {
         {!hasMore && <div className={Styles.loading}>No more questions to load.</div>}
         </PostnAnswerLayout>
         <div className={Styles.button}>
-        <FloatingButton />
+          <FloatingButton>
+            질문 작성하기
+          </FloatingButton>
         </div>
       </div>
     ) : ( 
@@ -108,7 +110,9 @@ const PostPage = () => {
           <div ref={lastElementRef} style={{ height: '20px' }}></div>
         </PostnAnswerLayout>
         <div className={Styles.button}>
-        <FloatingButton />
+          <FloatingButton>
+            질문 작성하기
+          </FloatingButton>
         </div>
       </div>
     )}

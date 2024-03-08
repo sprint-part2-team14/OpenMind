@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getSubjectInfo } from '../Utils/API';
-import processTime from '../Utils/processTime';
+import { getSubjectInfo } from '../../Utils/API';
+import processTime from '../../Utils/processTime';
 
 import Styles from '../../Styles/FeedCard.module.css';
 
@@ -9,7 +9,7 @@ import RejectAnswer from './RejectAnswer';
 import SentAnswer from './SentAnswer';
 import Reaction from '../Reaction/Reaction';
 import BadgeBrown from '../Badge/BadgeBrown';
-import BadeGray from '../Badge/BadgeGray';
+import BadgeGray from '../Badge/BadgeGray';
 
 const type = '질문';
 

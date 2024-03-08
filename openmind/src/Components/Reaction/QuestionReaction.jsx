@@ -4,7 +4,7 @@ import { ReactComponent as ThumbsDown } from '../../Assets/Icon/iconThumbsDown.s
 import { ReactComponent as ThumbsUp } from '../../Assets/Icon/iconThumbsUp.svg';
 import Styles from '../../Styles/Reaction.module.css';
 
-import { ReactionAPI } from '../Utils/ReactionAPI';
+import { ReactionAPI } from '../../Utils/ReactionAPI';
 
 export function QuestionReaction({ type, id }) {
   const [like, setLike] = useState(null);
