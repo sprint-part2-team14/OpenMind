@@ -34,7 +34,6 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
             {/*<FeedCard />
             <FeedCard />
             <FeedCard />*/}
-            {children}
             {/*children 승현언니는 FeedCard로 지인은 AnswerFeedCard로*/}
           </div>
         </div>

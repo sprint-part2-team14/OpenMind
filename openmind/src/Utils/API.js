@@ -38,7 +38,7 @@ const getRequest = async (endpoint) => {
 };
 
 export const postExampleRequest = async () => {
-  return postRequest('/무엇이든지/엔드포인트로', 데이터);
+  return postRequest('/무엇이든지/엔드포인트로', '데이터');
 };*/
 
 export const getPostIdRequest = async () => {
