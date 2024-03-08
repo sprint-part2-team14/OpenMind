@@ -1,4 +1,4 @@
-import Styles from '../Styles/Badge.module.css';
+import Styles from '../../Styles/Badge.module.css';
 
 const BadgeBrown = () => {
   return (

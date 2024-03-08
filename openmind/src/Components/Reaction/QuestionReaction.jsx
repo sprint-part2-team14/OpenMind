@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { ReactComponent as ThumbsDown } from '../Assets/Icon/iconThumbsDown.svg';
-import { ReactComponent as ThumbsUp } from '../Assets/Icon/iconThumbsUp.svg';
-import Styles from '../Styles/Reaction.module.css';
+import { ReactComponent as ThumbsDown } from '../../Assets/Icon/iconThumbsDown.svg';
+import { ReactComponent as ThumbsUp } from '../../Assets/Icon/iconThumbsUp.svg';
+import Styles from '../../Styles/Reaction.module.css';
 
 import { ReactionAPI } from '../Utils/ReactionAPI';
 

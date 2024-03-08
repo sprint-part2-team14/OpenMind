@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { getSubjectInfo } from '../Utils/API';
 import processTime from '../Utils/processTime';
 
-import Styles from '../Styles/FeedCard.module.css';
+import Styles from '../../Styles/FeedCard.module.css';
 
 import FeedQuestion from './FeedQuestion';
-import RejectAnswer from '../RejectAnswer';
-import SentAnswer from '../SentAnswer';
+import RejectAnswer from './RejectAnswer';
+import SentAnswer from './SentAnswer';
 import Reaction from '../Reaction/Reaction';
-import BadgeBrown from './BadgeBrown';
-import BadgeGray from './BadgeGray';
+import BadgeBrown from '../Badge/BadgeBrown';
+import BadeGray from '../Badge/BadgeGray';
 
 const type = '질문';
 

@@ -1,4 +1,4 @@
-import Styles from '../Styles/SentAnswer.module.css';
+import Styles from '../../Styles/SentAnswer.module.css';
 
 const SentAnswer = ({ profileImg, username, createdAt, children }) => {
   return (

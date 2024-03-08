@@ -7,7 +7,7 @@ import AnswerPage from './Pages/AnswerPage';
 
 function App() {
   return (
-  <Routes>
+    <Routes>
       <Route path='/'>
         <Route index element={<MainPage />} />
         <Route path='list'>
@@ -18,7 +18,7 @@ function App() {
           <Route path=':id/answer' element={<AnswerPage />} />
         </Route>
       </Route>
-  </Routes>
+    </Routes>
   );
 }
 
