@@ -1,9 +1,9 @@
 import Styles from '../Styles/FloatingButton.module.css';
 
-const FloatingButton = ({ onClick, text = '질문 작성' }) => {
+const FloatingButton = ({ children, ...rest }) => {
   return (
-    <button type='button' className={Styles.floatingButton} onClick={onClick}>
-      {text}
+    <button className={Styles.floatingButton} {...rest}>
+      {children}
     </button>
   );
 };
