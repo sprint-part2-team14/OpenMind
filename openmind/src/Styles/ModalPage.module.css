@@ -1,0 +1,80 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalBody {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalContent {
+  padding: 4rem 4rem 7rem;
+  box-shadow: var(--shadow2pt);
+  width: 61.2rem;
+  height: 45.4rem;
+  background: var(--gray10);
+  border-radius: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerBox {
+  display: flex;
+}
+
+.icon {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.headerFont {
+  display: flex;
+  font-family: Actor;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3rem; /* 125% */
+  color: var(--gray60);
+}
+
+.profile {
+  display: flex;
+  margin-top: 4.3rem;
+  align-items: center;
+}
+
+.profileFont {
+  font-family: Actor;
+  font-size: var(--body2);
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  color: var(--gray60);
+}
+
+.profileContext {
+  font-size: var(--body3);
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  color: var(--gray60);
+}
+
+.inputText {
+  width: 53.2rem;
+  height: 18rem;
+  margin-top: 1.5rem;
+}
+
+.sendButton {
+  margin-top: 0.8rem;
+  width: 53.2rem;
+}

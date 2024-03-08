@@ -1,13 +1,9 @@
 import Styles from '../Styles/FloatingButton.module.css';
 
-const FloatingButton = ({onClick}) => {
-  //const handleOnClick = () => {
-    // 변경 요망
-    //console.log(1);
-  //};
+const FloatingButton = ({ children, ...rest }) => {
   return (
-    <button type='button' className={Styles.floatingButton} onClick={onClick}>
-      질문 작성하기
+    <button className={Styles.floatingButton} {...rest}>
+      {children}
     </button>
   );
 };

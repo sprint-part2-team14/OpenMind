@@ -1,9 +1,10 @@
-import { Route, Routes } from 'react-router-dom';
+// import { Route, Routes } from 'react-router-dom';
 import '../src/Styles/Css/Global.css';
-import MainPage from './Pages/MainPage';
-import ListPage from './Pages/ListPage';
-import PostPage from './Pages/PostPage';
-import AnswerPage from './Pages/AnswerPage';
+import ModalPage from './Pages/ModalPage';
+// import MainPage from './Pages/MainPage';
+// import ListPage from './Pages/ListPage';
+// import PostPage from './Pages/PostPage';
+// import AnswerPage from './Pages/AnswerPage';
 
 function App() {
   return (

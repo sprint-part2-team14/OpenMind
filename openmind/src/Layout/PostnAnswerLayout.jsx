@@ -2,7 +2,6 @@ import Styles from '../Styles/PostnAnswerLayout.module.css';
 
 import LOGO from '../Assets/Images/imageLogo.svg';
 import HEADER_IMG from '../Assets/Images/imageMainPage.svg';
-//import PROFILE_IMG from '../Assets/Images/imageUserProfile.svg'; 
 import MESSAGE_ICON from '../Assets/Icon/iconMessages.svg';
 
 import ShareButton from '../Components/ShareButton';
@@ -36,6 +35,7 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
             {/*<FeedCard />
             <FeedCard />
             <FeedCard />*/}
+            {/*children 승현언니는 FeedCard로 지인은 AnswerFeedCard로*/}
           </div>
         </div>
       </div>
