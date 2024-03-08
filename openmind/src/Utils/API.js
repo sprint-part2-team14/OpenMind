@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'https://openmind-api.vercel.app';
+const baseUrl = 'https://openmind-api.vercel.app/4-14/';
 
 const getRequest = async (endpoint) => {
   try {
@@ -41,13 +41,17 @@ export const postExampleRequest = async () => {
   return postRequest('/무엇이든지/엔드포인트로', 데이터);
 };*/
 
+export const getPostIdRequest = async () => {
+  return getRequest('subjects/');
+};
+
 //id 동적으로 받아올 예정
 export const getSubjectInfo = async () => {
-  return getRequest('/4-14/subjects/4272/');
+  return getRequest('subjects/4272/');
 };
 
 export const getSubjectQuestion = async (offset) => {
-  return getRequest(`/4-14/subjects/4272/questions/?limit=8&offset=${offset}`);
+  return getRequest(`subjects/4272/questions/?limit=8&offset=${offset}`);
 };
 
 /*export const getSubjectQuestion = async (limit, offset) => {

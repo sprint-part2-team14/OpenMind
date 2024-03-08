@@ -1,10 +1,9 @@
-import DropDownList from "./DropDownList";
-
+import DropDownList from './DropDownList.jsx';
 
 const DropDown = () => {
   return (
     <div>
-      <DropDownList/>
+      <DropDownList />
     </div>
   );
 };

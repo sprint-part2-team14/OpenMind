@@ -5,9 +5,9 @@ import processTime from '../Utils/processTime';
 import Styles from '../Styles/FeedCard.module.css';
 
 import FeedQuestion from './FeedQuestion';
-import RejectAnswer from './RejectAnswer';
-import SentAnswer from './SentAnswer';
-import Reaction from './Reaction';
+import RejectAnswer from '../RejectAnswer';
+import SentAnswer from '../SentAnswer';
+import Reaction from '../Reaction/Reaction';
 import BadgeBrown from './BadgeBrown';
 import BadgeGray from './BadgeGray';
 

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2.4rem;
+  background: var(--gray20);
+}
+
+.headerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo {
+  width: 14.6rem;
+  height: 5.7rem;
+}
+
+.boxButton {
+  width: 12.9rem;
+}
