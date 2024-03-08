@@ -6,10 +6,10 @@ import Styles from '../Styles/Reaction.module.css';
 
 import { ReactionAPI } from '../Utils/ReactionAPI';
 
-export function QuestionReaction({ type }) {
+export function QuestionReaction({ type, id}) {
   const [like, setLike] = useState(null);
   const [dislike, setDislike] = useState(null);
-  const questionId = 6618; // 고정 아이디가 아니라 추후 get으로 받아와서 변경해야함
+  const questionId = id;
 
   const handleReaction = async () => {
     try {
