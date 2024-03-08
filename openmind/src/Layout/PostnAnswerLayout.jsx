@@ -4,14 +4,16 @@ import LOGO from '../Assets/Images/imageLogo.svg';
 import HEADER_IMG from '../Assets/Images/imageMainPage.svg';
 import MESSAGE_ICON from '../Assets/Icon/iconMessages.svg';
 
-import ShareButton from '../Components/ShareButton';
+import ShareButton from '../Components/Button/ShareButton';
 //import FeedCard from '../Components/FeedCard';
 
 const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
   return (
     <>
       <div className={Styles.header}>
-        <a src='/' className={Styles.logo}><img src={LOGO} className={Styles.logoImage} alt='로고이미지' /></a>
+        <a src='/' className={Styles.logo}>
+          <img src={LOGO} className={Styles.logoImage} alt='로고이미지' />
+        </a>
         <img src={HEADER_IMG} className={Styles.headerImage} />
       </div>
       <div className={Styles.main}>

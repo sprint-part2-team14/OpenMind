@@ -1,4 +1,4 @@
-import Styles from '../Styles/FloatingButton.module.css';
+import Styles from '../../Styles/FloatingButton.module.css';
 
 const FloatingButton = ({ children, ...rest }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
-import ICON_PERSON from '../Assets/Icon/iconPerson.svg';
-import Styles from '../Styles/InputField.module.css';
+import ICON_PERSON from '../../Assets/Icon/iconPerson.svg';
+import Styles from '../../Styles/InputField.module.css';
 
 const InputField = () => {
   const containerRef = useRef(null);

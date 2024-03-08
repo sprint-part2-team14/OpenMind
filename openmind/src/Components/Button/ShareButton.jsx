@@ -1,7 +1,7 @@
-import FACE_BOOK from '../Assets/Icon/iconFaceBook.svg';
-import KAKAO from '../Assets/Icon/iconKakaoTalk.svg';
-import LINK from '../Assets/Icon/iconLink.svg';
-import Styles from '../Styles/ShareButton.module.css';
+import FACE_BOOK from '../../Assets/Icon/iconFaceBook.svg';
+import KAKAO from '../../Assets/Icon/iconKakaoTalk.svg';
+import LINK from '../../Assets/Icon/iconLink.svg';
+import Styles from '../../Styles/ShareButton.module.css';
 
 const ShareButton = ({ ...rest }) => {
   return (

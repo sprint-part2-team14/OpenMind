@@ -1,4 +1,4 @@
-import Styles from '../Styles/EmptyAnswer.module.css';
+import Styles from '../../Styles/EmptyAnswer.module.css';
 
 const EmptyAnswer = ({ profileImg, username }) => {
   return (

@@ -1,6 +1,6 @@
-import BoxButton from '../Components/BoxButton';
+import BoxButton from '../Components/Button/BoxButton';
 import IMAGE_LOGO from '../Assets/Images/imageLogo.svg';
-import InputField from '../Components/InputField';
+import InputField from '../Components/Input/InputField';
 import Styles from '../Styles/MainPage.module.css';
 import { Link } from 'react-router-dom';
 

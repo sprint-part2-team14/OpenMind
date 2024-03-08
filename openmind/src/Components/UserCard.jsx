@@ -1,9 +1,8 @@
-import ICON_MESSAGE from '../Assets/Icon/iconMessages.svg';
-import Styles from '../Styles/UserCard.module.css';
-import {useNavigate} from 'react-router-dom';
+import ICON_MESSAGE from '../../Assets/Icon/iconMessages.svg';
+import Styles from '../../Styles/UserCard.module.css';
+import { useNavigate } from 'react-router-dom';
 
-const UserCard = ({ id, name, imageSource, questionCount}) => {
-  
+const UserCard = ({ id, name, imageSource, questionCount }) => {
   const handleOnClick = () => {
     const navigate = useNavigate();
 
