@@ -18,20 +18,22 @@ const AnswerPage = () => {
   const [count, setCount] = useState();
   // const param = useParams();
   const id = 3943; //param.id
-  
+
   // api를 먼저가져오기
-  async function apiGet(){
+  async function apiGet() {
     const answerApi = await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${id}/`, 'GET');
     // 가져온 결과를 저장
     setImgSource(answerApi.imageSource);
     setName(answerApi.name);
     setCount(answerApi.questionCount);
   }
-  useEffect(()=>{apiGet()}, []);
+  useEffect(() => {
+    apiGet();
+  }, []);
 
-  return(
+  return (
     <PostnAnswerLayout name={name} imageSource={imgSource} questionCount={count}>
-      <AnswerFeedCard id={id} name={name} imageSource={imgSource}/>
+      <AnswerFeedCard id={id} name={name} imageSource={imgSource} />
     </PostnAnswerLayout>
   );
 };

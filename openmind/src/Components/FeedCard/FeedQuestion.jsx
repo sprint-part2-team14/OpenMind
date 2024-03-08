@@ -1,4 +1,4 @@
-import Styles from '../Styles/FeedQuestion.module.css';
+import Styles from '../../Styles/FeedQuestion.module.css';
 
 const FeedQuestion = ({ type, createdAt, children }) => {
   return (

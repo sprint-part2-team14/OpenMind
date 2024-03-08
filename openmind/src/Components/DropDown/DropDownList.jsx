@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import ARROW_DOWN from '../Assets/Icon/iconArrowDown.svg';
-import ARROW_UP from '../Assets/Icon/iconArrowUp.svg';
-import Styles from '../Styles/DropDown.module.css';
-import { ReactionAPI } from '../Utils/ReactionAPI';
+import ARROW_DOWN from '../../Assets/Icon/iconArrowDown.svg';
+import ARROW_UP from '../../Assets/Icon/iconArrowUp.svg';
+import Styles from '../../Styles/DropDown.module.css';
+import { ReactionAPI } from '../../Utils/ReactionAPI';
 
 import DropDownData from './DropDownData';
 

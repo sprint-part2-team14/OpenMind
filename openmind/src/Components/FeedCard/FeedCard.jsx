@@ -1,5 +1,5 @@
-import KEBAB_SRC from '../Assets/Icon/iconMore.svg';
-import Styles from '../Styles/FeedCard.module.css';
+import KEBAB_SRC from '../../Assets/Icon/iconMore.svg';
+import Styles from '../../Styles/FeedCard.module.css';
 
 //import FeedFooter from "./FeedFooter";
 import EmptyAnswer from './EmptyAnswer';
@@ -7,7 +7,7 @@ import FeedQuestion from './FeedQuestion';
 import RejectAnswer from '../RejectAnswer';
 import SentAnswer from '../SentAnswer';
 import Reaction from '../Reaction/Reaction';
-import BadgeBrown from './BadgeBrown';
+import BadgeBrown from '../Badge/BadgeBrown';
 
 //api 연동 전 임시 데이터
 const demoData = {
