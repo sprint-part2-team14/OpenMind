@@ -6,15 +6,15 @@ import Styles from '../Styles/Reaction.module.css';
 
 import { ReactionAPI } from '../Utils/ReactionAPI';
 
-export function QuestionReaction({ type }) {
+export function QuestionReaction({ id, type }) {
   const [like, setLike] = useState(null);
   const [dislike, setDislike] = useState(null);
-  const questionId = 6618; // 고정 아이디가 아니라 추후 get으로 받아와서 변경해야함
+  //const questionId = 6618; // 고정 아이디가 아니라 추후 get으로 받아와서 변경해야함
 
   const handleReaction = async () => {
     try {
       const reaction = await ReactionAPI(
-        `https://openmind-api.vercel.app/4-14/questions/${questionId}/reaction/`,
+        `https://openmind-api.vercel.app/4-14/questions/${id}/reaction/`,
         'POST',
         { type: type }
       );

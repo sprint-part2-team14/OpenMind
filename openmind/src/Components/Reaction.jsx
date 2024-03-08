@@ -25,12 +25,12 @@ import { QuestionReaction } from './QuestionReaction';
 // like가 is_active면 dislike버튼 비활성화 처리 반대도 마찬가지,
 // 좋아요 취소시 로컬스토리지에서 is_active 삭제
 
-const Reaction = () => {
+const Reaction = ({id}) => {
   return (
     <>
       <div>
-        <QuestionReaction type='like' />
-        <QuestionReaction type='dislike' />
+        <QuestionReaction id={id} type='like' />
+        <QuestionReaction id={id} type='dislike' />
       </div>
     </>
   );

@@ -14,7 +14,7 @@ const TIME = {
   year,
 };
 
-const processTimeData = (createdAt) => {
+const processTime = (createdAt) => {
   const currentTime = new Date();
   const createdAtDate = new Date(createdAt);
   const passedTime = currentTime - createdAtDate;
@@ -24,30 +24,30 @@ const processTimeData = (createdAt) => {
     return `${Math.floor(passedTime / year)}년 전`;
   }
   if (year <= passedTime) {
-    return `1년 전`;
+    return '1년 전';
   }
   if (month * 2 <= passedTime) {
     return `${Math.floor(passedTime / month)}달 전`;
   }
   if (month <= passedTime) {
-    return `1달 전`;
+    return '1달 전';
   }
   if (day * 2 <= passedTime) {
     return `${Math.floor(passedTime / day)}일 전`;
   }
   if (day <= passedTime) {
-    return `1일 전`;
+    return '1일 전';
   }
   if (hour * 2 <= passedTime) {
     return `${Math.floor(passedTime / hour)}시간 전`;
   }
   if (hour <= passedTime) {
-    return `1시간 전`;
+    return '1시간 전';
   }
   if (minute * 2 <= passedTime) {
     return `${Math.floor(passedTime / minute)}분 전`;
   }
-  return `1분 전`;
+  return '1분 전';
 };
 
-export default processTimeData;
+export default processTime;

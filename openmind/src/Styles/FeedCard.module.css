@@ -23,11 +23,16 @@
   height: 2.6rem;
 }
 
+.emptyAnswer {
+  color: var(--gray10);
+}
+
 .line {
   align-self: stretch;
   height: 0.1rem;
   background: var(--gray30);
 }
+
 
 
 @media (min-width: 768px) {

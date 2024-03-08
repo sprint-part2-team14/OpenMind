@@ -1,11 +1,13 @@
 .header {
-  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .headerImage {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -14,13 +16,13 @@
 }
 
 .logo {
-  position: absolute;
-  bottom: 10rem;
   display: flex;
   width: 12.4rem;
   height: 4.9rem;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 3rem;
 }
 
 .main {
@@ -30,22 +32,26 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  padding-bottom: 10rem;
 }
 
 .profileArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
   position: relative;
 }
 
 .profileGroup {
-  position: absolute;
-  bottom: -12rem;
-  right: -7.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
-  z-index: 10;
+  position: absolute;
+  top: -8rem;
 }
 
 .profileImage {
@@ -55,6 +61,7 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  border-radius: 50%;
 }
 
 .username {
@@ -110,17 +117,20 @@
     gap: 2rem;
   }
   .headerImage {
-    width: 120rem;
-    height: 23.4rem;
+    /*width: 120rem;*/
+    width: 150%;
+    height: 35vh;
   }
   .logo {
-    bottom: 13rem;
+    top: 8rem;
+  }
+  .logoImg {
     width: 17rem;
     height: 6.7rem;
   }
   .profileGroup {
-    bottom: -13rem;
-    right: -9.5rem;
+    bottom: -6rem;
+    right: -7.5rem;
   }
   .profileImage {
     width: 13.6rem;
