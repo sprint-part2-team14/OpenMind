@@ -4,9 +4,9 @@ import Styles from '../Styles/FeedCard.module.css';
 //import FeedFooter from "./FeedFooter";
 import EmptyAnswer from './EmptyAnswer';
 import FeedQuestion from './FeedQuestion';
-import RejectAnswer from './RejectAnswer';
-import SentAnswer from './SentAnswer';
-import Reaction from './Reaction';
+import RejectAnswer from '../RejectAnswer';
+import SentAnswer from '../SentAnswer';
+import Reaction from '../Reaction/Reaction';
 import BadgeBrown from './BadgeBrown';
 
 //api 연동 전 임시 데이터

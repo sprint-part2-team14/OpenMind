@@ -4,9 +4,9 @@ import { ReactComponent as ThumbsDown } from '../Assets/Icon/iconThumbsDown.svg'
 import { ReactComponent as ThumbsUp } from '../Assets/Icon/iconThumbsUp.svg';
 import Styles from '../Styles/Reaction.module.css';
 
-import { ReactionAPI } from '../Utils/ReactionAPI';
+import { ReactionAPI } from '../../Utils/ReactionAPI';
 
-export function QuestionReaction({ type, id}) {
+export function QuestionReaction({ type, id }) {
   const [like, setLike] = useState(null);
   const [dislike, setDislike] = useState(null);
   const questionId = id;
