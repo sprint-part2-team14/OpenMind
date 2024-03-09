@@ -29,8 +29,8 @@ const Reaction = ({id}) => {
   return (
     <>
       <div>
-        <QuestionReaction type='like' id={id} />
-        <QuestionReaction type='dislike' id={id} />
+        <QuestionReaction id={id} type='like' />
+        <QuestionReaction id={id} type='dislike' />
       </div>
     </>
   );

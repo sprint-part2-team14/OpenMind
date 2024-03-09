@@ -1,4 +1,4 @@
-import Styles from '../../Styles/Toast.css';
+import Styles from '../Styles/Toast.css';
 
 const Toast = () => {
   return (

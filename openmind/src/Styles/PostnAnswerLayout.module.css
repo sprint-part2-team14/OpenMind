@@ -1,93 +1,94 @@
 .header {
-  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .headerImage {
-  flex-direction: column;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 90.6rem;
   height: 17.7rem;
 }
 
 .logo {
-  position: absolute;
-  bottom: 10rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.logoImage{
-  width: 12.4rem;
-  height: 4.9rem;
+  justify-content: center;
+  position: absolute;
+  top: 3rem;
 }
 
 .main {
-  background: var(--gray20);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 10rem;
+  background: var(--gray20);
 }
 
 .profileArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
+  z-index: 10;
 }
 
 .profileGroup {
-  position: absolute;
-  bottom: -12rem;
-  right: -7.5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1.2rem;
-  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: -8rem;
 }
 
 .profileImage {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   width: 10.4rem;
   height: 10.4rem;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
   border-radius: 50%;
 }
 
 .username {
-  color: var(--gray60);
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 3rem;
+  color: var(--gray60);
 }
 
 .feedContainer {
   display: flex;
-  width: 32.7rem;
-  padding: 1.6rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1.6rem;
-  border-radius: 16px;
-  border: 1px solid var(--brown20);
-  background: var(--brown10);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 16rem;
+  padding: 1.6rem;
+  border: 1px solid var(--brown20);
+  width: 32.7rem;
+  background: var(--brown10);
+  border-radius: 16px;
 }
 
 .questionInfo {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .messageIcon {
@@ -96,17 +97,17 @@
 }
 
 .infoText {
-  color: var(--brown40);
   font-family: Actor;
   font-size: var(--body2);
   font-weight: 400;
   line-height: 2.4rem;
+  color: var(--brown40);
 }
 
 .questionArea {
   display: flex;
-  flex-direction: column;
   gap: 1.6rem;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -114,19 +115,20 @@
     gap: 2rem;
   }
   .headerImage {
-    width: 120rem;
-    height: 23.4rem;
+    /*width: 120rem;*/
+    width: 150%;
+    height: 35vh;
   }
   .logo {
-    bottom: 13rem;
+    top: 8rem;
   }
-  .logoImage {
+  .logoImg {
     width: 17rem;
     height: 6.7rem;
   }
   .profileGroup {
-    bottom: -13rem;
-    right: -9.5rem;
+    right: -7.5rem;
+    bottom: -6rem;
   }
   .profileImage {
     width: 13.6rem;

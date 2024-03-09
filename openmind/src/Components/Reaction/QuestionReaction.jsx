@@ -10,6 +10,7 @@ export function QuestionReaction({ type, id }) {
   const [like, setLike] = useState(null);
   const [dislike, setDislike] = useState(null);
   const questionId = id;
+ 
 
   const handleReaction = async () => {
     try {
