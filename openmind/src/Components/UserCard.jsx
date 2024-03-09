@@ -12,7 +12,7 @@ const UserCard = ({ id, name, imageSource, questionCount }) => {
   };
 
   return (
-    <div className={Styles.userCard}>
+    <div className={Styles.userCard} onClick={handleOnClick}>
       <div className={Styles.profileBox}>
         <img className={Styles.image} src={imageSource} alt='프로필 이미지' />
         <div className={Styles.profileContext}>{name}</div>

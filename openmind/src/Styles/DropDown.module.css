@@ -1,5 +1,4 @@
-
-.dropDown{
+.dropDown {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +26,7 @@
 .dropDown:hover .dropList {
   display: flex;
 }
-.dropDown:hover .dropBtn{
+.dropDown:hover .dropBtn {
   color: var(--gray60);
   border: 1px solid var(--gray60);
 }
@@ -43,7 +42,7 @@
 .dropDown:hover .arrowDown {
   display: none;
 }
-.dropList{
+.dropList {
   display: none;
   padding: 0.4rem 0;
   flex-direction: column;
@@ -55,14 +54,14 @@
   box-shadow: var(--shadow1pt);
 }
 
-.dropList p{
+.dropList p {
   display: flex;
   padding: 0.6rem 1.6rem;
   justify-content: center;
   align-items: center;
   gap: 8px;
   align-self: stretch;
-  background: var(--gray10);;
+  background: var(--gray10);
   flex: 1 0 0;
   color: var(--gray60);
   font-size: var(--caption);

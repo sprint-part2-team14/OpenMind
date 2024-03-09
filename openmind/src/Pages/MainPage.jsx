@@ -3,8 +3,26 @@ import IMAGE_LOGO from '../Assets/Images/imageLogo.svg';
 import InputField from '../Components/Input/InputField';
 import Styles from '../Styles/MainPage.module.css';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const MainPage = () => {
+  const [userId, setUserId] = useState(null);
+  // const navigate = useNavigate();
+
+  const handleUserId = e => {
+    setUserId(e.target.value);
+    console.log(e.target.value);
+  };
+
+  useEffect(() => {
+    console.log('Current userId:', userId);
+  }, [userId]);
+
+  // const handleIdOnClick = () => {
+  //   if (userId) {
+  //   }
+  // };
+
   return (
     <div className={Styles.body}>
       <div className={Styles.container}>
@@ -13,12 +31,14 @@ const MainPage = () => {
         </a>
         <Link to='/list?page=1&sort=createdAt'>
           <div className={Styles.headButton}>
-            <BoxButton className={Styles.headButton} theme='outline' text='질문하러 가기' />
+            <BoxButton theme='outline' arrow='true'>
+              질문하러 가기
+            </BoxButton>
           </div>
         </Link>
         <div className={Styles.inputBox}>
-          <InputField />
-          <BoxButton />
+          <InputField value={userId} onChange={handleUserId} />
+          <BoxButton>질문 받기</BoxButton>
         </div>
       </div>
     </div>
