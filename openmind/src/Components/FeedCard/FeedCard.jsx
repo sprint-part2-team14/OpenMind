@@ -31,13 +31,11 @@ const FeedCard = ({ id, createdAt, content, answer }) => {
 
   return (
     <div className={Styles.container}>
-      <div className={Styles.nav}>
-        {answer?.content.length ? <BadgeBrown /> : <BadgeGray />}
-      </div>
+      <div className={Styles.nav}>{answer?.content.length ? <BadgeBrown /> : <BadgeGray />}</div>
       <FeedQuestion type={type} createdAt={processTime(createdAt)}>
         {content}
       </FeedQuestion>
-      {/* 삼항 연산자를 중첩하여 Answer부분을 조건부 렌더링 */}
+      {/* 삼항 연산자를 중첩하여 Answer부분을 조건부 렌더링_추후 리팩토링 */}
       {answer?.isRejected ? (
         <RejectAnswer profileImg={userData?.imageSource} username={userData?.name} createdAt={processTime(createdAt)} />
       ) : !answer?.isRejected && answer?.content.length ? (
@@ -48,7 +46,7 @@ const FeedCard = ({ id, createdAt, content, answer }) => {
         <div className={Styles.emptyAnswer}>아직 답변이 없습니다.</div>
       )}
       <p className={Styles.line}></p>
-      <Reaction id={id}/>
+      <Reaction id={id} />
     </div>
   );
 };

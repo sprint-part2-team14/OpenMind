@@ -47,10 +47,10 @@
   align-self: stretch;
   padding: 1.6rem;
   position: relative;
+  max-width: 20rem;
   height: 18.6rem;
   background: var(--gray20);
   border-radius: 8px;
-  max-width: 20rem;
 }
 
 .answerInput::placeholder {
@@ -70,6 +70,7 @@
   justify-content: center;
   align-self: stretch;
   padding: 1.2rem 2.4rem;
+  max-width: 20rem;
   height: 4.6rem;
   background: var(--brown30);
   font-size: 1.6rem;
@@ -77,7 +78,6 @@
   line-height: 2.2rem;
   color: var(--gray10);
   border-radius: 8px;
-  max-width: 20rem;
 }
 
 .answerButton:hover {

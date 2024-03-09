@@ -27,16 +27,14 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
           <div className={Styles.questionInfo}>
             <img src={MESSAGE_ICON} className={Styles.messageIcon} />
             {questionCount ? (
-            <div className={Styles.infoText}>{questionCount}개의 질문이 있습니다.</div>
-            ) : (<div className={Styles.infoText}>아직 질문이 없습니다.</div>
+              <div className={Styles.infoText}>{questionCount}개의 질문이 있습니다.</div>
+            ) : (
+              <div className={Styles.infoText}>아직 질문이 없습니다.</div>
             )}
           </div>
           <div className={Styles.questionArea}>
             {children}
-            {/*<FeedCard />
-            <FeedCard />
-            <FeedCard />*/}
-            {/*children 승현언니는 FeedCard로 지인은 AnswerFeedCard로*/}
+            {/*children은 승현언니는 FeedCard로 지인은 AnswerFeedCard로*/}
           </div>
         </div>
       </div>

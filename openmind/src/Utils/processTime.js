@@ -14,7 +14,7 @@ const TIME = {
   year,
 };
 
-const processTime = (createdAt) => {
+const processTime = createdAt => {
   const currentTime = new Date();
   const createdAtDate = new Date(createdAt);
   const passedTime = currentTime - createdAtDate;

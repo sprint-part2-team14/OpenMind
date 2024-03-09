@@ -39,14 +39,14 @@ const PostPage = () => {
 
   //유저 프로필 데이터 가져오기 (비동기)
   useEffect(() => {
-  const fetchUserData = async () => {
-    try {
-      const userResult = await getSubjectInfo();
-      setUserData(userResult);
-    } catch (error) {
-      console.error('Error fetching data:', error.message);
-    }
-  };
+    const fetchUserData = async () => {
+      try {
+        const userResult = await getSubjectInfo();
+        setUserData(userResult);
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
+      }
+    };
 
     fetchUserData();
   }, []);
@@ -56,12 +56,15 @@ const PostPage = () => {
   //추가 데이터 로드를 위해 fetchAskData() 함수를 호출
   useEffect(() => {
     if (!hasMore) return;
-    
-    const observerInstance = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        fetchAskData();
-      }
-    }, { threshold: 0.1 });
+
+    const observerInstance = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          fetchAskData();
+        }
+      },
+      { threshold: 0.1 }
+    );
 
     if (lastElementRef.current) {
       observerInstance.observe(lastElementRef.current);
@@ -78,50 +81,50 @@ const PostPage = () => {
     fetchAskData();
   }, []);
 
-
   console.log(askData);
   console.log(userData);
 
   return (
-    <div> 
+    <div>
       {askData?.length ? (
-      <div className={Styles.background}>
-        <PostnAnswerLayout name={userData?.name} imageSource={userData?.imageSource} questionCount={userData?.questionCount}>
-        {askData.map((questionData) => (
-          <FeedCard key={questionData?.id} {...questionData} />
-        ))}
-        {loading && <div className={Styles.loading}>Loading...</div>}
-        <div ref={lastElementRef} style={{ height: '20px' }}></div>
-        {!hasMore && <div className={Styles.loading}>No more questions to load.</div>}
-        </PostnAnswerLayout>
-        <div className={Styles.button}>
-          <FloatingButton>
-            질문 작성하기
-          </FloatingButton>
-        </div>
-      </div>
-    ) : ( 
-      <div className={Styles.background}>
-        <PostnAnswerLayout name={userData?.name} imageSource={userData?.imageSource} questionCount={userData?.questionCount}>
-          <div className={Styles.noQuestion}>
-            <img src={NO_QUESTION} className={Styles.noQuestionImg} alt='질문없음' />
+        <div className={Styles.background}>
+          <PostnAnswerLayout
+            name={userData?.name}
+            imageSource={userData?.imageSource}
+            questionCount={userData?.questionCount}>
+            {askData.map(questionData => (
+              <FeedCard key={questionData?.id} {...questionData} />
+            ))}
+            {loading && <div className={Styles.loading}>Loading...</div>}
+            <div ref={lastElementRef} style={{ height: '20px' }}></div>
+            {!hasMore && <div className={Styles.loading}>No more questions to load.</div>}
+          </PostnAnswerLayout>
+          <div className={Styles.button}>
+            <FloatingButton>질문 작성하기</FloatingButton>
           </div>
-          {loading && <div className={Styles.loading}>Loading...</div>}
-          <div ref={lastElementRef} style={{ height: '20px' }}></div>
-        </PostnAnswerLayout>
-        <div className={Styles.button}>
-          <FloatingButton>
-            질문 작성하기
-          </FloatingButton>
         </div>
-      </div>
-    )}
+      ) : (
+        <div className={Styles.background}>
+          <PostnAnswerLayout
+            name={userData?.name}
+            imageSource={userData?.imageSource}
+            questionCount={userData?.questionCount}>
+            <div className={Styles.noQuestion}>
+              <img src={NO_QUESTION} className={Styles.noQuestionImg} alt='질문 없음' />
+            </div>
+            {loading && <div className={Styles.loading}>Loading...</div>}
+            <div ref={lastElementRef} style={{ height: '20px' }}></div>
+          </PostnAnswerLayout>
+          <div className={Styles.button}>
+            <FloatingButton>질문 작성하기</FloatingButton>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default PostPage;
-
 
 //개별 피드
 //답변이 완료된 질문은 “답변완료”로 표시

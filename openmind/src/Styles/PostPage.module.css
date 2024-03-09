@@ -1,14 +1,14 @@
 .background {
-  background: var(--gray20);
   overflow-x: hidden;
   height: 100vh;
+  background: var(--gray20);
 }
 
 .button {
-  z-index: 100;
   position: fixed;
-  bottom: 3rem;
   right: 2rem;
+  bottom: 3rem;
+  z-index: 100;
 }
 
 .noQuestion {
@@ -22,12 +22,12 @@
 
 .loading {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: var(--brown40);
-  font-size: 3rem;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 12rem;
+  font-size: 3rem;
+  color: var(--brown40);
 }
 
 @media (min-width: 768px) {

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseUrl = 'https://openmind-api.vercel.app/4-14/';
 
-const getRequest = async (endpoint) => {
+const getRequest = async endpoint => {
   try {
     const response = await axios.get(`${baseUrl}${endpoint}`);
 
@@ -50,7 +50,7 @@ export const getSubjectInfo = async () => {
   return getRequest('subjects/4272/');
 };
 
-export const getSubjectQuestion = async (offset) => {
+export const getSubjectQuestion = async offset => {
   return getRequest(`subjects/4272/questions/?limit=8&offset=${offset}`);
 };
 

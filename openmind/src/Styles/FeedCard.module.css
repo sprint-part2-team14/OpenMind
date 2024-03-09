@@ -33,13 +33,11 @@
   background: var(--gray30);
 }
 
-
-
 @media (min-width: 768px) {
   .container {
-    width: 68.4rem;
     gap: 3.2rem;
     padding: 3.2rem;
+    width: 68.4rem;
   }
 
   .nav {
