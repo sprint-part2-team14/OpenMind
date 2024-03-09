@@ -1,4 +1,4 @@
-import Styles from '../Styles/RejectAnswer.module.css';
+import Styles from '../../Styles/RejectAnswer.module.css';
 
 const RejectAnswer = ({ profileImg, username, createdAt }) => {
   return (

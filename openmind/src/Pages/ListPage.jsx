@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import UserCardMobile from '../Components/UserCard';
 import { getPostIdRequest } from '../Utils/API';
-import BoxButton from '../Components/BoxButton';
+import BoxButton from '../Components/Button/BoxButton';
 import LOGO from '../Assets/Images/imageLogo.svg';
-import DropDown from '../Components/DropDown';
+import DropDown from '../Components/DropDown/DropDown';
 import Styles from '../Styles/ListPage.module.css';
 
 // 오픈마인드 로고를 클릭하면 “/” 페이지로 이동
