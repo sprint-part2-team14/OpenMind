@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import UserCardMobile from '../Components/UserCard';
 import { getPostIdRequest } from '../Utils/API';
 import BoxButton from '../Components/Button/BoxButton';
 import LOGO from '../Assets/Images/imageLogo.svg';
 import DropDown from '../Components/DropDown/DropDown';
 import Styles from '../Styles/ListPage.module.css';
+import Pagenation from '../Components/PageNation';
+import UserCard from '../Components/UserCard';
 
 // 오픈마인드 로고를 클릭하면 “/” 페이지로 이동
 //현재 페이지, 정렬 순서를 설정해서 카드 리스트 조회 요청
@@ -21,13 +22,16 @@ const ListPage = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       const userData = await getPostIdRequest();
-      const userResults = userData.results;
-      setUsers(userResults);
+      setUsers(userData.results);
     };
     fetchUserData();
   }, []);
 
   console.log(user);
+
+  const handleOnClick = () => {
+    console.log(1);
+  };
 
   return (
     <div className={Styles.container}>
@@ -35,21 +39,18 @@ const ListPage = () => {
         <a href='/'>
           <img className={Styles.logo} src={LOGO} alt='로고 이미지' />
         </a>
-        <BoxButton className={Styles.boxButton} theme='outline' state='default' text='답변하러 가기' />
+        <BoxButton theme='outline' state='default' text='답변하러 가기' />
       </div>
-      <div>
-        <h2>누구에게 질문할까요?</h2>
+      <div className={Styles.subTitleGroup}>
+        <h2 className={Styles.subTitle}>누구에게 질문할까요?</h2>
         <DropDown />
       </div>
-      {user?.map(i => (
-        <UserCardMobile
-          key={i.id}
-          id={i.id}
-          name={i.name}
-          imageSource={i.imageSource}
-          questionCount={i.questionCount}
-        />
-      ))}
+      <div className={Styles.userCardContainer}>
+        {user?.map(i => (
+          <UserCard key={i.id} id={i.id} name={i.name} imageSource={i.imageSource} questionCount={i.questionCount} />
+        ))}
+      </div>
+      <Pagenation totalItems={59} limit={8} page={1} setPage={handleOnClick} />
     </div>
   );
 };
