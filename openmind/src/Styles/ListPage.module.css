@@ -1,14 +1,17 @@
 .container {
   display: flex;
+  align-items: center;
   flex-direction: column;
   padding: 4rem 2.4rem;
   background: var(--gray20);
 }
 
+/* 로고 & 답변 버튼 */
 .headerGroup {
   display: flex;
-  flex-direction: column;
   gap: 2rem;
+  align-items: center;
+  flex-direction: column;
 }
 
 .logo {
@@ -16,6 +19,35 @@
   height: 5.7rem;
 }
 
-.boxButton {
-  width: 12.9rem;
+/* 소제목 & 드롭다운 */
+.subTitleGroup {
+  display: flex;
+  gap: 4.2rem;
+  align-items: center;
+  margin-top: 5.2rem;
+  height: 3.4rem;
+  position: relative;
+}
+
+.subTitle {
+  color: var(--gray60);
+  text-align: center;
+  font-family: Actor;
+  font-size: var(--h3);
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.dropDown {
+  position: absolute;
+  z-index: 100;
+}
+
+/* 유저 카드 */
+.userCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1.6rem 0;
+  gap: 1.6rem;
 }
