@@ -6,7 +6,6 @@ import DropDown from '../Components/DropDown/DropDown';
 import Styles from '../Styles/ListPage.module.css';
 import Pagenation from '../Components/Pagenation';
 import UserCard from '../Components/UserCard';
-import DeleteButton from '../Components/Button/DeleteButton';
 
 const LIMIT = 8;
 
@@ -42,7 +41,6 @@ const ListPage = () => {
 
   return (
     <div className={Styles.container}>
-      <DeleteButton>삭제하기</DeleteButton>
       <div className={Styles.headerGroup}>
         <a href='/'>
           <img className={Styles.logo} src={LOGO} alt='로고 이미지' />
