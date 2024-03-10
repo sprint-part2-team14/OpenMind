@@ -6,14 +6,8 @@ import DropDown from '../Components/DropDown/DropDown';
 import Styles from '../Styles/ListPage.module.css';
 import Pagenation from '../Components/Pagenation';
 import UserCard from '../Components/UserCard';
+import DeleteButton from '../Components/Button/DeleteButton';
 
-//(기본 정렬 순서는 “최신순”)
-//“답변하러 가기” 버튼을 클릭시
-//질문 받기로 생성한 id가 로컬 스토리지에 없으면 “/” 페이지로 이동
-// 있으면 “/post/{id}/answer” 페이지로 이동
-//PC에서 너비가 1200px 보다 커질 경우
-//내부 내용의 위치는 고정하고 좌우 여백만 커짐
-//PC에서 카드 컴포넌트의 너비는 220px
 const LIMIT = 8;
 
 const ListPage = () => {
@@ -48,6 +42,7 @@ const ListPage = () => {
 
   return (
     <div className={Styles.container}>
+      <DeleteButton>삭제하기</DeleteButton>
       <div className={Styles.headerGroup}>
         <a href='/'>
           <img className={Styles.logo} src={LOGO} alt='로고 이미지' />
