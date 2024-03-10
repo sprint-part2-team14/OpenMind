@@ -1,21 +1,13 @@
-//import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import '../src/Styles/Css/Global.css';
-//import MainPage from './Pages/MainPage';
-//import ListPage from './Pages/ListPage';
+import MainPage from './Pages/MainPage';
+import ListPage from './Pages/ListPage';
 import PostPage from './Pages/PostPage';
-//import AnswerPage from './Pages/AnswerPage';
+import AnswerPage from './Pages/AnswerPage';
 
 function App() {
   return (
-    <>
-      <PostPage />
-    </>
-  );
-}
-
-export default App;
-
-/*<Routes>
+    <Routes>
       <Route path='/'>
         <Route index element={<MainPage />} />
         <Route path='list'>
@@ -26,4 +18,8 @@ export default App;
           <Route path=':id/answer' element={<AnswerPage />} />
         </Route>
       </Route>
-  </Routes>*/
+    </Routes>
+  );
+}
+
+export default App;
