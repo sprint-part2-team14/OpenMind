@@ -9,7 +9,7 @@ import BoxButton from '../Components/Button/BoxButton';
 // props로 close 이벤트를 상위로 전달과 데이터를 받아옴
 
 const ModalPage = ({ onClose, userData }) => {
-  const { imageSource, name } = userData;
+  //const { imageSource, name } = userData;
   return (
     <div className={Styles.container} onClick={onClose}>
       <div className={Styles.modalBody}>
@@ -25,8 +25,8 @@ const ModalPage = ({ onClose, userData }) => {
           </div>
           <div className={Styles.profile}>
             <p className={Styles.profileFont}>To.</p>
-            <img className={Styles.icon} src={imageSource} alt='닫기 아이콘' />
-            <p className={Styles.profileContext}>{name}</p>
+            <img className={Styles.profileImg} src={userData?.imageSource} alt='프로필 이미지' />
+            <p className={Styles.profileContext}>{userData?.name}</p>
           </div>
           <div className={Styles.inputText}>
             <InputTextArea />

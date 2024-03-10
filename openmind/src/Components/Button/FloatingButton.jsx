@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Styles from '../../Styles/FloatingButton.module.css';
 
-const FloatingButton = ({ children, ...rest }) => {
+const FloatingButton = ({ onClick, children, ...rest }) => {
   const [buttonText, setButtonText] = useState(children);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const FloatingButton = ({ children, ...rest }) => {
   }, []); // 의존성 배열이 빈 배열이므로, 마운트와 언마운트 시에만 실행됨
 
   return (
-    <button className={Styles.floatingButton} {...rest}>
+    <button className={Styles.floatingButton} onClick={onClick} {...rest}>
       {buttonText}
     </button>
   );
