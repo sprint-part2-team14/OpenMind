@@ -55,7 +55,9 @@ const ModalPage = ({ onClose, userData }) => {
             <InputTextArea value={question} onChange={handleQuestion} />
           </div>
           <div className={Styles.sendButton}>
-            <BoxButton onClick={handleQuestionOnClick} theme='outline' text='질문 보내기' />
+            <BoxButton onClick={handleQuestionOnClick} theme='outline'>
+              질문 보내기
+            </BoxButton>
           </div>
         </div>
       </div>

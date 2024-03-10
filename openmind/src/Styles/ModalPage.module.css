@@ -80,11 +80,31 @@
 
 .inputText {
   margin-top: 1.5rem;
-  width: 53.2rem;
-  height: 18rem;
+  width: 100%;
+  min-height: 18rem;
 }
 
 .sendButton {
   margin-top: 0.8rem;
-  width: 53.2rem;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .modalContent {
+    width: 32.7rem;
+    height: 56.8rem;
+  }
+
+  .inputText {
+    min-height: 35.8rem;
+  }
+
+  .headerFont {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .modalContent {
+    padding: 2.4rem;
+  }
 }
