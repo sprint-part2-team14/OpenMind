@@ -3,24 +3,9 @@ import React, { useState } from 'react';
 import ARROW_DOWN from '../../Assets/Icon/iconArrowDown.svg';
 import ARROW_UP from '../../Assets/Icon/iconArrowUp.svg';
 import Styles from '../../Styles/DropDown.module.css';
-// import { ReactionAPI } from '../../Utils/ReactionAPI';
-
-// import DropDownData from './DropDownData';
 
 const DropDownList = ({ onClick }) => {
-  // const [data, setData] = useState([]);
   const [listName, setListName] = useState('최신순');
-
-  // const dropData = async (type, list) => {
-  //   try {
-  //     const url = `https://openmind-api.vercel.app/4-14/subjects/?sort=${type}`;
-  //     const DropDownAPI = await ReactionAPI(url, 'GET');
-  //     setData(DropDownAPI.results);
-  //     setListName(list);
-  //   } catch (error) {
-  //     console.error('Error occurred while reacting:', error);
-  //   }
-  // };
 
   const handleClick = (sort, name) => {
     setListName(name);
@@ -48,7 +33,6 @@ const DropDownList = ({ onClick }) => {
           </p>
         </div>
       </div>
-      {/* <DropDownData /> */}
     </>
   );
 };
