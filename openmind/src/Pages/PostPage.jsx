@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { getSubjectInfo, getSubjectQuestion } from '../Utils/API';
+import useModal from '../Hooks/useModal';
 import PostnAnswerLayout from '../Layout/PostnAnswerLayout';
 import FeedCard from '../Components/FeedCard/FeedCard';
 import FloatingButton from '../Components/Button/FloatingButton';
+import ModalPage from './ModalPage';
 
 import Styles from '../Styles/PostPage.module.css';
 import NO_QUESTION from '../Assets/Images/imageNoQuestion.svg';
@@ -14,6 +16,8 @@ const PostPage = () => {
   const [hasMore, setHasMore] = useState(true); //더 로드할 데이터가 있는지
   const [loading, setLoading] = useState(false); //데이터 로딩 상태
   const lastElementRef = useRef(null); //페이지 하단에 위치하고 Intersection Observer에 의해 관찰될 요소를 참조하기 위한 ref
+
+  const { modalState, openModal, closeModal } = useModal();
 
   //질문 데이터 가져오기 (비동기)
   const fetchAskData = useCallback(async () => {
@@ -100,8 +104,9 @@ const PostPage = () => {
             {!hasMore && <div className={Styles.loading}>No more questions to load.</div>}
           </PostnAnswerLayout>
           <div className={Styles.button}>
-            <FloatingButton>질문 작성하기</FloatingButton>
+            <FloatingButton onClick={openModal}>질문 작성</FloatingButton>
           </div>
+          {modalState && <ModalPage onClose={closeModal} userData={userData} />}
         </div>
       ) : (
         <div className={Styles.background}>
@@ -116,8 +121,9 @@ const PostPage = () => {
             <div ref={lastElementRef} style={{ height: '20px' }}></div>
           </PostnAnswerLayout>
           <div className={Styles.button}>
-            <FloatingButton>질문 작성하기</FloatingButton>
+            <FloatingButton onClick={openModal}>질문 작성</FloatingButton>
           </div>
+          {modalState && <ModalPage onClose={closeModal} userData={userData} />}
         </div>
       )}
     </div>

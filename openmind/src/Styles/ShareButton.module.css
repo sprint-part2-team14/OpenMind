@@ -12,6 +12,7 @@
   width: 4rem;
   height: 4rem;
   background-color: var(--brown40);
+  cursor: pointer;
   border-radius: 200px;
 }
 
@@ -24,6 +25,7 @@
   width: 4rem;
   height: 4rem;
   background: var(--yellow50);
+  cursor: pointer;
   border-radius: 200px;
 }
 
@@ -36,5 +38,6 @@
   width: 4rem;
   height: 4rem;
   background: var(--blue50);
+  cursor: pointer;
   border-radius: 200px;
 }
