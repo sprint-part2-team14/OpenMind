@@ -3,7 +3,7 @@ import IMAGE_LOGO from '../Assets/Images/imageLogo.svg';
 import InputField from '../Components/Input/InputField';
 import Styles from '../Styles/MainPage.module.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { postRequest } from '../Utils/API';
 
 const MainPage = () => {
@@ -13,10 +13,6 @@ const MainPage = () => {
   const handleUserId = e => {
     setUserId(e.target.value);
   };
-
-  useEffect(() => {
-    console.log('Current userId:', userId);
-  }, [userId]);
 
   const handleIdOnClick = async () => {
     if (userId) {
