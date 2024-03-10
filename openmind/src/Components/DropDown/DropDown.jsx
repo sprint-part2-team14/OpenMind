@@ -1,9 +1,9 @@
 import DropDownList from './DropDownList.jsx';
 
-const DropDown = () => {
+const DropDown = ({ onClick }) => {
   return (
     <div>
-      <DropDownList />
+      <DropDownList onClick={onClick} />
     </div>
   );
 };

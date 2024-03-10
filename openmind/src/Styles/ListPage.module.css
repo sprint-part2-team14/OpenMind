@@ -26,6 +26,7 @@
   align-items: center;
   margin-top: 5.2rem;
   height: 3.4rem;
+  position: relative;
 }
 
 .subTitle {
@@ -37,9 +38,16 @@
   line-height: 3rem;
 }
 
+.dropDown {
+  position: absolute;
+  z-index: 100;
+}
+
 /* 유저 카드 */
 .userCardContainer {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin: 1.6rem 0;
+  gap: 1.6rem;
 }

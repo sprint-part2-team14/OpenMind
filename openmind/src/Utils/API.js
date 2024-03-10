@@ -41,8 +41,8 @@ export const postExampleRequest = async () => {
   return postRequest('/무엇이든지/엔드포인트로', '데이터');
 };*/
 
-export const getPostIdRequest = async () => {
-  return getRequest('subjects/');
+export const getPageRequest = async (offset, sort) => {
+  return getRequest(`subjects/?limit=8&offset=${offset}&sort=${sort}`);
 };
 
 //id 동적으로 받아올 예정
