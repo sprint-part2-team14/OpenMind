@@ -1,7 +1,7 @@
 import Styles from '../Styles/PostnAnswerLayout.module.css';
 
 import LOGO from '../Assets/Images/imageLogo.svg';
-import HEADER_IMG from '../Assets/Images/imageMainPage.svg';
+import HEADER_IMG from '../Assets/Images/imageMainPage.png';
 import MESSAGE_ICON from '../Assets/Icon/iconMessages.svg';
 
 import ShareButton from '../Components/Button/ShareButton';
