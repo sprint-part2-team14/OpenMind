@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { getSubjectInfo } from '../../Utils/API';
 import processTime from '../../Utils/processTime';
 
@@ -14,11 +15,12 @@ import BadgeGray from '../Badge/BadgeGray';
 const type = '질문';
 
 const FeedCard = ({ id, createdAt, content, answer }) => {
+  const { subjectId } = useParams();
   const [userData, setUserData] = useState(null);
 
   const fetchUserData = async () => {
     try {
-      const userResult = await getSubjectInfo();
+      const userResult = await getSubjectInfo(subjectId);
       setUserData(userResult);
     } catch (error) {
       console.error('Error fetching data:', error.message);
@@ -27,7 +29,7 @@ const FeedCard = ({ id, createdAt, content, answer }) => {
 
   useEffect(() => {
     fetchUserData();
-  }, []);
+  }, [subjectId]);
 
   return (
     <div className={Styles.container}>

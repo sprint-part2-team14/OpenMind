@@ -14,8 +14,8 @@ function App() {
           <Route index element={<ListPage />} />
         </Route>
         <Route path='post'>
-          <Route path=':id' element={<PostPage />} />
-          <Route path=':id/answer' element={<AnswerPage />} />
+          <Route path=':subjectId' element={<PostPage />} />
+          <Route path=':subjectId/answer' element={<AnswerPage />} />
         </Route>
       </Route>
     </Routes>

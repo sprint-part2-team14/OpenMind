@@ -46,12 +46,12 @@ export const getPageRequest = async (offset, sort) => {
 };
 
 //id 동적으로 받아올 예정
-export const getSubjectInfo = async () => {
-  return getRequest('subjects/4272/');
+export const getSubjectInfo = async subjectId => {
+  return getRequest(`subjects/${subjectId}/`);
 };
 
-export const getSubjectQuestion = async offset => {
-  return getRequest(`subjects/4272/questions/?limit=8&offset=${offset}`);
+export const getSubjectQuestion = async (subjectId, offset) => {
+  return getRequest(`subjects/${subjectId}/questions/?limit=8&offset=${offset}`);
 };
 
 /*export const getSubjectQuestion = async (limit, offset) => {

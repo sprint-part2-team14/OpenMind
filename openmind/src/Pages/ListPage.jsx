@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { getPageRequest } from '../Utils/API';
 import BoxButton from '../Components/Button/BoxButton';
 import LOGO from '../Assets/Images/imageLogo.svg';
@@ -17,6 +18,7 @@ import UserCard from '../Components/UserCard';
 const LIMIT = 8;
 
 const ListPage = () => {
+  const navigate = useNavigate();
   const [user, setUsers] = useState();
   const [total, setTotal] = useState();
   const [page, setPage] = useState(1);
@@ -44,6 +46,10 @@ const ListPage = () => {
     fetchUserData(LIMIT * (page - 1));
   };
 
+  const handleCardClick = subjectId => {
+    navigate(`/post/${subjectId}`);
+  };
+
   console.log(total);
 
   return (
@@ -62,7 +68,14 @@ const ListPage = () => {
       </div>
       <div className={Styles.userCardContainer}>
         {user?.map(i => (
-          <UserCard key={i.id} id={i.id} name={i.name} imageSource={i.imageSource} questionCount={i.questionCount} />
+          <UserCard
+            key={i.id}
+            id={i.id}
+            name={i.name}
+            imageSource={i.imageSource}
+            questionCount={i.questionCount}
+            onClick={() => handleCardClick(i.id)}
+          />
         ))}
       </div>
       <Pagenation totalItems={total} limit={8} page={page} onClick={handlePage} />

@@ -4,6 +4,11 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
+  width: 100%;
+  height: 15vh;
+  background: url('../Assets/Images/imageMainPage.png') no-repeat top;
+  background-color: var(--gray20);
+  background-size: contain;
 }
 
 .headerImage {
@@ -11,8 +16,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 90.6rem;
-  height: 17.7rem;
+  /*width: 90.6rem;
+  height: 17.7rem;*/
 }
 
 .logo {
@@ -20,7 +25,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 3rem;
+  top: 1rem;
+}
+
+.logoImg {
+  width: 12.4rem;
+  height: 4.9rem;
 }
 
 .main {
@@ -49,7 +59,7 @@
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  top: -8rem;
+  top: -5rem;
 }
 
 .profileImage {
@@ -114,13 +124,16 @@
   .questionArea {
     gap: 2rem;
   }
+  .header {
+    height: 30vh;
+  }
   .headerImage {
     /*width: 120rem;*/
     width: 150%;
     height: 35vh;
   }
   .logo {
-    top: 8rem;
+    top: 4rem;
   }
   .logoImg {
     width: 17rem;
@@ -129,6 +142,7 @@
   .profileGroup {
     right: -7.5rem;
     bottom: -6rem;
+    top: -10rem;
   }
   .profileImage {
     width: 13.6rem;
