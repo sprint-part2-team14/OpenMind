@@ -22,10 +22,6 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
       .catch(error => alert('링크 복사 실패 : ', error));
   };
 
-  const shareKakao = () => {
-    window.open(`https://www.kakaocorp.com/page?url=${encodeURIComponent(currentUrl)}`, '_blank');
-  };
-
   const shareFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, '_blank');
   };
@@ -43,7 +39,7 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
           <div className={Styles.profileGroup}>
             <img src={imageSource} className={Styles.profileImage} />
             <div className={Styles.username}>{name}</div>
-            <ShareButton onClickLink={copyURLtoClipboard} onClickKakao={shareKakao} onClickFacebook={shareFacebook} />
+            <ShareButton onClickLink={copyURLtoClipboard} onClickFacebook={shareFacebook} />
             {showToast && <Toast />}
           </div>
         </div>
