@@ -100,7 +100,7 @@ const PostPage = () => {
             {!hasMore && <div className={Styles.loading}>No more questions to load.</div>}
           </PostnAnswerLayout>
           <div className={Styles.button}>
-            <FloatingButton>질문 작성하기</FloatingButton>
+            <FloatingButton>질문 작성</FloatingButton>
           </div>
         </div>
       ) : (
@@ -116,7 +116,7 @@ const PostPage = () => {
             <div ref={lastElementRef} style={{ height: '20px' }}></div>
           </PostnAnswerLayout>
           <div className={Styles.button}>
-            <FloatingButton>질문 작성하기</FloatingButton>
+            <FloatingButton>질문 작성</FloatingButton>
           </div>
         </div>
       )}

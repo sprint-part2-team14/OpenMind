@@ -4,11 +4,35 @@
   justify-content: center;
   padding: 1.2rem 2rem;
   box-shadow: var(--shadow2pt);
+  position: fixed;
+  bottom: 11rem;
+  left: 50%;
+  z-index: 50;
+  width: 20rem;
+  height: 4.2rem;
   background: var(--gray60);
   font-size: var(--caption);
   font-style: normal;
   font-weight: 500;
   line-height: 1.8rem;
   color: var(--gray10);
+  text-align: center;
+  animation: fadeOut 5s forwards; /* 3초 후 사라지는 애니메이션 */
   border-radius: 8px;
+  transform: translateX(-50%);
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .toast {
+    bottom: 7rem;
+  }
 }
