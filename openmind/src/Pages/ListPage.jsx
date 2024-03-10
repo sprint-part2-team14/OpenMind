@@ -7,10 +7,6 @@ import Styles from '../Styles/ListPage.module.css';
 import Pagenation from '../Components/Pagenation';
 import UserCard from '../Components/UserCard';
 
-//(기본 정렬 순서는 “최신순”)
-//“답변하러 가기” 버튼을 클릭시
-//질문 받기로 생성한 id가 로컬 스토리지에 없으면 “/” 페이지로 이동
-// 있으면 “/post/{id}/answer” 페이지로 이동
 //PC에서 너비가 1200px 보다 커질 경우
 //내부 내용의 위치는 고정하고 좌우 여백만 커짐
 //PC에서 카드 컴포넌트의 너비는 220px
@@ -24,7 +20,6 @@ const ListPage = () => {
   const fetchUserData = async (offset = 0, sort = 'time') => {
     const userData = await getPageRequest(offset, sort);
 
-    console.log(userData);
     setTotal(userData.count);
     setUsers(userData.results);
   };
@@ -39,7 +34,6 @@ const ListPage = () => {
   };
 
   const handlePage = page => {
-    console.log(page);
     setPage(page);
     fetchUserData(LIMIT * (page - 1));
   };
@@ -58,14 +52,16 @@ const ListPage = () => {
       </div>
       <div className={Styles.subTitleGroup}>
         <h2 className={Styles.subTitle}>누구에게 질문할까요?</h2>
-        <DropDown className={Styles.dropDown} onClick={handleDropDown} />
+        <DropDown onClick={handleDropDown} />
       </div>
       <div className={Styles.userCardContainer}>
         {user?.map(i => (
           <UserCard key={i.id} id={i.id} name={i.name} imageSource={i.imageSource} questionCount={i.questionCount} />
         ))}
       </div>
-      <Pagenation totalItems={total} limit={8} page={page} onClick={handlePage} />
+      <div className={Styles.pagenation}>
+        <Pagenation totalItems={total} limit={8} page={page} onClick={handlePage} />
+      </div>
     </div>
   );
 };
