@@ -2,26 +2,33 @@ import BoxButton from '../Components/Button/BoxButton';
 import IMAGE_LOGO from '../Assets/Images/imageLogo.svg';
 import InputField from '../Components/Input/InputField';
 import Styles from '../Styles/MainPage.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { postRequest } from '../Utils/API';
 
 const MainPage = () => {
-  const [userId, setUserId] = useState(null);
-  // const navigate = useNavigate();
+  const [userId, setUserId] = useState('');
+  const navigate = useNavigate();
 
   const handleUserId = e => {
     setUserId(e.target.value);
-    console.log(e.target.value);
   };
 
   useEffect(() => {
     console.log('Current userId:', userId);
   }, [userId]);
 
-  // const handleIdOnClick = () => {
-  //   if (userId) {
-  //   }
-  // };
+  const handleIdOnClick = async () => {
+    if (userId) {
+      try {
+        const result = await postRequest('subjects/', { name: userId });
+        console.log(result);
+        navigate(`/post/${result.id}/answer`);
+      } catch (error) {
+        console.error('작업 수행 중 오류 발생 : ', error);
+      }
+    } else alert('이름을 입력해주세요');
+  };
 
   return (
     <div className={Styles.body}>
@@ -38,7 +45,7 @@ const MainPage = () => {
         </Link>
         <div className={Styles.inputBox}>
           <InputField value={userId} onChange={handleUserId} />
-          <BoxButton>질문 받기</BoxButton>
+          <BoxButton onClick={handleIdOnClick}>질문 받기</BoxButton>
         </div>
       </div>
     </div>

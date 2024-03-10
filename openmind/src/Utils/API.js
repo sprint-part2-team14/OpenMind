@@ -17,11 +17,11 @@ const getRequest = async endpoint => {
   }
 };
 
-/*const postRequest = async (endpoint, data) => {
+export const postRequest = async (endpoint, data) => {
   try {
     const response = await axios.post(`${baseUrl}${endpoint}`, data);
 
-    if (response.status !== 200) {
+    if (response.status !== 201) {
       throw new Error(`${endpoint}에서 불러오는데 실패했습니다`);
     }
 
@@ -30,7 +30,7 @@ const getRequest = async endpoint => {
     console.log(error);
     throw error;
   }
-};*/
+};
 
 //임의로 변경해서 사용하시면 됩니다 :D!
 /*export const getExampleRequest = async () => {
