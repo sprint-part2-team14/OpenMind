@@ -1,4 +1,4 @@
-/* .userCard {
+.userCard {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -8,19 +8,6 @@
   border: 1px solid var(--gray40);
   width: 22rem;
   height: 18.7rem;
-  background: var(--gray10);
-  border-radius: 16px;
-} */
-
-.userCard {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 1.6rem;
-  border: 1px solid var(--gray40);
-  width: 15.55rem;
-  height: 16.2rem;
   background: var(--gray10);
   border-radius: 16px;
 }
