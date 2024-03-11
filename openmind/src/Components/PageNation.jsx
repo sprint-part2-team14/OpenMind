@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Styles from '../Styles/PageNation.module.css';
+import Styles from '../Styles/Pagenation.module.css';
 
 const Pagenation = ({ totalItems, limit, page, onClick }) => {
   const totalPage = Math.ceil(totalItems / limit);
