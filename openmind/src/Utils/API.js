@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const baseUrl = 'https://openmind-api.vercel.app/4-14/';
+const baseUrl = "https://openmind-api.vercel.app/4-14/";
 
 const getRequest = async endpoint => {
   try {
@@ -17,9 +17,24 @@ const getRequest = async endpoint => {
   }
 };
 
-/*const postRequest = async (endpoint, data) => {
+// const postRequest = async (endpoint, data) => {
+//   try {
+//     const response = await axios.post(`${baseUrl}${endpoint}`, data);
+
+//     if (response.status !== 200) {
+//       throw new Error(`${endpoint}에서 불러오는데 실패했습니다`);
+//     }
+
+//     return response.data;
+//   } catch (error) {
+//     console.log(error);
+//     throw error;
+//   }
+// };
+
+export const patchRequest = async (endpoint, data) => {
   try {
-    const response = await axios.post(`${baseUrl}${endpoint}`, data);
+    const response = await axios.patch(`${baseUrl}${endpoint}`, data);
 
     if (response.status !== 200) {
       throw new Error(`${endpoint}에서 불러오는데 실패했습니다`);
@@ -30,7 +45,22 @@ const getRequest = async endpoint => {
     console.log(error);
     throw error;
   }
-};*/
+};
+
+export const deleteRequest = async (endpoint, data) => {
+  try {
+    const response = await axios.delete(`${baseUrl}${endpoint}`, data);
+
+    if (response.status !== 204) {
+      throw new Error(`${endpoint}에서 불러오는데 실패했습니다`);
+    }
+
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
 
 //임의로 변경해서 사용하시면 됩니다 :D!
 /*export const getExampleRequest = async () => {
@@ -42,12 +72,12 @@ export const postExampleRequest = async () => {
 };*/
 
 export const getPostIdRequest = async () => {
-  return getRequest('subjects/');
+  return getRequest("subjects/");
 };
 
 //id 동적으로 받아올 예정
 export const getSubjectInfo = async () => {
-  return getRequest('subjects/4272/');
+  return getRequest("subjects/4272/");
 };
 
 export const getSubjectQuestion = async offset => {
