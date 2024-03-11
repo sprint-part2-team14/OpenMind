@@ -74,3 +74,15 @@ export const getSubjectInfo = async subjectId => {
 export const getSubjectQuestion = async (subjectId, offset) => {
   return getRequest(`subjects/${subjectId}/questions/?limit=8&offset=${offset}`);
 };
+
+export const fetchData = async () => {
+  const allPokemonData = [];
+  for (let i = 1; i <= 50; i++) {
+    const getName = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${i}`);
+    const koreanName = getName.data.names.find(name => name.language.name === 'ko');
+    const URL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
+    allPokemonData.push({ name: koreanName.name, imgUrl: URL });
+  }
+  console.log(allPokemonData);
+  return allPokemonData;
+};

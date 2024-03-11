@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getPageRequest } from '../Utils/API';
+import { fetchData, getPageRequest } from '../Utils/API';
 import BoxButton from '../Components/Button/BoxButton';
 import LOGO from '../Assets/Images/imageLogo.svg';
 import DropDown from '../Components/DropDown/DropDown';
@@ -41,7 +41,16 @@ const ListPage = () => {
     navigate(`/post/${subjectId}`);
   };
 
-  console.log(total);
+  const handleAnswerBtn = () => {
+    const subjectId = localStorage.getItem('subjectId');
+    if (subjectId) {
+      navigate(`/post/${subjectId}/answer`);
+    } else {
+      navigate('/');
+    }
+  };
+
+  fetchData();
 
   return (
     <div className={Styles.container}>
@@ -49,7 +58,7 @@ const ListPage = () => {
         <a href='/'>
           <img className={Styles.logo} src={LOGO} alt='로고 이미지' />
         </a>
-        <BoxButton theme='outline' arrow>
+        <BoxButton theme='outline' arrow onClick={handleAnswerBtn}>
           답변하러 가기
         </BoxButton>
       </div>
