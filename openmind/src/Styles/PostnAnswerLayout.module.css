@@ -3,32 +3,26 @@ html {
   height: 100vh;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.container {
   position: relative;
-  width: 100%;
-  height: 15vh;
-  background: url('../Assets/Images/imageMainPage.png') no-repeat top;
-  background-color: var(--gray20);
-  background-size: contain;
 }
 
-.headerImage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.header {
+  width: 100%;
+  height: 17.7rem;
+  background: url("../Assets/Images/imageMainPage.png") no-repeat top;
+  background-color: var(--gray20);
+  background-position: top;
+  background-size: cover;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
 .logoImg {
@@ -38,12 +32,14 @@ html {
 
 .main {
   display: flex;
-  gap: 4rem;
+  gap: 5.4rem;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-bottom: 10rem;
-  background: var(--gray20);
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .profileArea {
@@ -52,7 +48,6 @@ html {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  z-index: 10;
 }
 
 .profileGroup {
@@ -61,8 +56,6 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: absolute;
-  top: -5rem;
 }
 
 .profileImage {
@@ -88,7 +81,6 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 16rem;
   padding: 1.6rem;
   border: 1px solid var(--brown20);
   width: 32.7rem;
@@ -127,40 +119,35 @@ html {
   .questionArea {
     gap: 2rem;
   }
+
   .header {
-    height: 30vh;
+    height: 23.4rem;
   }
-  .headerImage {
-    width: 150%;
-    height: 35vh;
-  }
-  .logo {
-    top: 4rem;
-  }
+
   .logoImg {
     width: 17rem;
     height: 6.7rem;
   }
-  .profileGroup {
-    right: -7.5rem;
-    bottom: -6rem;
-    top: -10rem;
-  }
+
   .profileImage {
     width: 13.6rem;
     height: 13.6rem;
   }
+
   .username {
     font-size: 3.2rem;
     line-height: 4rem;
   }
+
   .feedContainer {
     width: 70.4rem;
   }
+
   .messageIcon {
     width: 2.4rem;
     height: 2.4rem;
   }
+
   .infoText {
     font-size: 2rem;
     line-height: 2.5rem;
