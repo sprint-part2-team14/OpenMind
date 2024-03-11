@@ -1,8 +1,8 @@
-import Styles from '../../Styles/DeleteButton.module.css';
+import Styles from "../../Styles/DeleteButton.module.css";
 
-const DeleteButton = ({ onClick, children, ...rest }) => {
+const DeleteButton = ({ onClick, children, setCount, ...rest }) => {
   return (
-    <button className={Styles.deleteButton} onClick={onClick} {...rest}>
+    <button className={Styles.deleteButton} onClick={() => onClick(setCount)} {...rest}>
       {children}
     </button>
   );

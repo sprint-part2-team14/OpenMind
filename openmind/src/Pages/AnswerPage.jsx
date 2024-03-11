@@ -10,7 +10,9 @@ import { useEffect, useState } from "react";
 import { ReactionAPI } from "../Utils/ReactionAPI";
 
 import AnswerFeedCardRender from "../Components/AnswerPage/AnswerFeedCardRender";
-import AnswerLayout from "../Layout/AnswerLayout";
+import PostnAnswerLayout from "../Layout/PostnAnswerLayout";
+import AnswerDeleteButton from "../Components/AnswerPage/AnswerDeleteButton";
+import DeleteButton from "../Components/Button/DeleteButton";
 
 const AnswerPage = () => {
   const [imgSource, setImgSource] = useState();
@@ -43,15 +45,20 @@ const AnswerPage = () => {
   }, [count, results]);
 
   return (
-    <AnswerLayout name={name} imageSource={imgSource} questionCount={count} setCount={setCount}>
-      <AnswerFeedCardRender
-        subjectId={subjectId}
-        name={name}
-        imageSource={imgSource}
-        results={results}
-        setResults={setResults}
-      />
-    </AnswerLayout>
+    <>
+      <PostnAnswerLayout name={name} imageSource={imgSource} questionCount={count}>
+        <DeleteButton onClick={AnswerDeleteButton} setCount={setCount}>
+          삭제하기
+        </DeleteButton>
+        <AnswerFeedCardRender
+          subjectId={subjectId}
+          name={name}
+          imageSource={imgSource}
+          results={results}
+          setResults={setResults}
+        />
+      </PostnAnswerLayout>
+    </>
   );
 };
 
