@@ -5,14 +5,14 @@
 //수정할 내용이 없으면 '수정완료' 버튼은 활성화 되지 않습니다.
 //화면 최상단의 '삭제하기' 버튼을 누르면 받은 질문들과 피드가 한 번에 삭제가 됩니다.
 // import {useParams} from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { ReactionAPI } from "../Utils/ReactionAPI";
+import { ReactionAPI } from '../Utils/ReactionAPI';
 
-import AnswerFeedCardRender from "../Components/AnswerPage/AnswerFeedCardRender";
-import PostnAnswerLayout from "../Layout/PostnAnswerLayout";
-import AnswerDeleteButton from "../Components/AnswerPage/AnswerDeleteButton";
-import DeleteButton from "../Components/Button/DeleteButton";
+import AnswerFeedCardRender from '../Components/AnswerPage/AnswerFeedCardRender';
+import PostnAnswerLayout from '../Layout/PostnAnswerLayout';
+import AnswerDeleteButton from '../Components/AnswerPage/AnswerDeleteButton';
+import DeleteButton from '../Components/Button/DeleteButton';
 
 const AnswerPage = () => {
   const [imgSource, setImgSource] = useState();
@@ -25,10 +25,10 @@ const AnswerPage = () => {
 
   // api를 먼저가져오기
   async function apiGet() {
-    const answerApi = await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${subjectId}/`, "GET");
+    const answerApi = await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${subjectId}/`, 'GET');
     const questionApi = await ReactionAPI(
       `https://openmind-api.vercel.app/4-14/subjects/${subjectId}/questions/`,
-      "GET"
+      'GET'
     );
     // 가져온 결과를 저장
     setImgSource(answerApi.imageSource);
