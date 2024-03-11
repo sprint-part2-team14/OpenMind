@@ -5,8 +5,11 @@
   align-items: center;
   width: 7.9rem;
   gap: 0.4rem;
+  cursor: pointer;
+  position: absolute;
+  top: -0.8rem;
+  margin-left: -2.5rem;
 }
-
 .dropBtn {
   display: flex;
   padding: 0.8rem 1.2rem;
@@ -22,6 +25,7 @@
   font-size: var(--caption);
   font-weight: 500;
   line-height: 1.8rem;
+  cursor: pointer;
 }
 .dropDown:hover .dropList {
   display: flex;
@@ -67,4 +71,11 @@
   font-size: var(--caption);
   font-weight: 500;
   line-height: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .dropDown {
+    top: 3.5rem;
+    margin-left: -3.5rem;
+  }
 }
