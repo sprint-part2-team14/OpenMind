@@ -1,5 +1,5 @@
-import Styles from "../../Styles/DeleteButton.module.css";
-import { getAnswerQuestion, deleteAnswerQuestion } from "../../Utils/API";
+import Styles from '../../Styles/DeleteButton.module.css';
+import { getAnswerQuestion, deleteAnswerQuestion } from '../../Utils/API';
 
 const DeleteButton = ({ id, setCount, children, ...rest }) => {
   const AnswerDeleteButton = async () => {

@@ -5,14 +5,14 @@
 //수정할 내용이 없으면 '수정완료' 버튼은 활성화 되지 않습니다.
 //화면 최상단의 '삭제하기' 버튼을 누르면 받은 질문들과 피드가 한 번에 삭제가 됩니다.
 // import {useParams} from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { useParams } from "react-router-dom";
-import { getSubjectInfo, getAnswerUpdate } from "../Utils/API";
-import AnswerFeedCardRender from "../Components/AnswerPage/AnswerFeedCardRender";
-import PostnAnswerLayout from "../Layout/PostnAnswerLayout";
-import DeleteButton from "../Components/Button/DeleteButton";
-import mainStyles from "../Styles/AnswerFeedCard.module.css";
+import { useParams } from 'react-router-dom';
+import { getSubjectInfo, getAnswerUpdate } from '../Utils/API';
+import AnswerFeedCardRender from '../Components/AnswerPage/AnswerFeedCardRender';
+import PostnAnswerLayout from '../Layout/PostnAnswerLayout';
+import DeleteButton from '../Components/Button/DeleteButton';
+import mainStyles from '../Styles/AnswerFeedCard.module.css';
 
 const AnswerPage = () => {
   const [imgSource, setImgSource] = useState();

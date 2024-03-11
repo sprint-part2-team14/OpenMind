@@ -1,17 +1,17 @@
-import Reaction from "../Reaction/Reaction";
-import BadgeBrown from "../Badge/BadgeBrown";
-import BadgeGray from "../Badge/BadgeGray";
-import AnswerKebab from "./AnswerKebab";
-import { useState } from "react";
-import { getAnswerUpdate, postAnswerNumber, patchAnswerNumber } from "../../Utils/API";
+import Reaction from '../Reaction/Reaction';
+import BadgeBrown from '../Badge/BadgeBrown';
+import BadgeGray from '../Badge/BadgeGray';
+import AnswerKebab from './AnswerKebab';
+import { useState } from 'react';
+import { getAnswerUpdate, postAnswerNumber, patchAnswerNumber } from '../../Utils/API';
 
-import { ReactComponent as KEBAB_SRC } from "../../Assets/Icon/iconMore.svg";
-import Styles from "../../Styles/FeedCard.module.css";
-import feedStyles from "../../Styles/FeedQuestion.module.css";
-import answerStyles from "../../Styles/SentAnswer.module.css";
-import processTime from "../../Utils/processTime";
-import mainStyles from "../../Styles/AnswerFeedCard.module.css";
-import buttonStyles from "../../Styles/BoxButton.module.css";
+import { ReactComponent as KEBAB_SRC } from '../../Assets/Icon/iconMore.svg';
+import Styles from '../../Styles/FeedCard.module.css';
+import feedStyles from '../../Styles/FeedQuestion.module.css';
+import answerStyles from '../../Styles/SentAnswer.module.css';
+import processTime from '../../Utils/processTime';
+import mainStyles from '../../Styles/AnswerFeedCard.module.css';
+import buttonStyles from '../../Styles/BoxButton.module.css';
 
 const AnswerFeedCardRender = ({ subjectId, imageSource, name, results, setResults }) => {
   const [fix, setFix] = useState({}); // 수정하기(여러 데이터이므로 객체로 선언)
@@ -39,7 +39,7 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, name, results, setResult
       questionId: number,
       content: answerData[number],
       isRejected: false,
-      team: "4-14",
+      team: '4-14',
     });
     if (Object.keys(response).length > 3) {
       updateFeed();
@@ -80,31 +80,31 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, name, results, setResult
           <p className={feedStyles.question}>{index.content}</p>
         </div>
         <div className={answerStyles.container}>
-          <img className={answerStyles.profile} src={imageSource} alt='프로필이미지'></img>
+          <img className={answerStyles.profile} src={imageSource} alt="프로필이미지"></img>
           <div className={answerStyles.answerArea}>
             <div>
               {index.answer !== null ? (
                 fix[index.answer.id] === true ? (
                   <div className={mainStyles.space}>
                     <p className={answerStyles.username}>{name}</p>
-                    <label htmlFor='fix'></label>
+                    <label htmlFor="fix"></label>
                     <input
                       className={mainStyles.textSpace}
-                      type='text'
-                      id='fix'
+                      type="text"
+                      id="fix"
                       name={index.id}
                       value={fixData[index.id] !== undefined ? fixData[index.id] : index.answer.content}
                       onChange={event => {
                         fixTargetValue(event);
                       }}
-                      placeholder='답변을 입력해주세요'></input>
+                      placeholder="답변을 입력해주세요"></input>
                     <button
                       className={
                         fixData[index.id] !== undefined && fixData[index.id].length > 0
-                          ? [buttonStyles.boxButton, buttonStyles.fill, mainStyles.abled, mainStyles.button].join(" ")
-                          : [buttonStyles.boxButton, mainStyles.disabled, mainStyles.button].join(" ")
+                          ? [buttonStyles.boxButton, buttonStyles.fill, mainStyles.abled, mainStyles.button].join(' ')
+                          : [buttonStyles.boxButton, mainStyles.disabled, mainStyles.button].join(' ')
                       }
-                      type='submit'
+                      type="submit"
                       onClick={() => feedFix(index.answer.id, index)}>
                       수정 완료
                     </button>
@@ -121,24 +121,24 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, name, results, setResult
               ) : (
                 <div className={mainStyles.space}>
                   <p className={answerStyles.username}>{name}</p>
-                  <label htmlFor='answer'></label>
+                  <label htmlFor="answer"></label>
                   <input
                     className={mainStyles.textSpace}
-                    type='text'
-                    id='answer'
+                    type="text"
+                    id="answer"
                     name={index.id} // 각각 feedcard마다의 이름을 위해서
-                    value={answerData[index.id] !== undefined ? answerData[index.id] : ""} //사용자가 적는 답변(index.id를 통해 무슨 feedcard인지 구분가능)
+                    value={answerData[index.id] !== undefined ? answerData[index.id] : ''} //사용자가 적는 답변(index.id를 통해 무슨 feedcard인지 구분가능)
                     onChange={event => {
                       targetValue(event);
                     }}
-                    placeholder='답변을 입력해주세요'></input>
+                    placeholder="답변을 입력해주세요"></input>
                   <button
                     className={
                       answerData[index.id] !== undefined && answerData[index.id].length > 0
-                        ? [buttonStyles.boxButton, buttonStyles.fill, mainStyles.abled, mainStyles.button].join(" ")
-                        : [buttonStyles.boxButton, mainStyles.disabled, mainStyles.button].join(" ")
+                        ? [buttonStyles.boxButton, buttonStyles.fill, mainStyles.abled, mainStyles.button].join(' ')
+                        : [buttonStyles.boxButton, mainStyles.disabled, mainStyles.button].join(' ')
                     }
-                    type='submit'
+                    type="submit"
                     onClick={() => feedAnswer(index.id)}>
                     답변 하기
                   </button>

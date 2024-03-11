@@ -1,9 +1,9 @@
-import { useState } from "react";
-import KEBAB_SRC from "../../Assets/Icon/iconMore.svg";
-import Styles from "../../Styles/FeedCard.module.css";
-import kebabStyles from "../../Styles/AnswerKebab.module.css";
-import KebabStyles from "../../Styles/Kebab.module.css";
-import { deleteAnswerNumber } from "../../Utils/API";
+import { useState } from 'react';
+import KEBAB_SRC from '../../Assets/Icon/iconMore.svg';
+import Styles from '../../Styles/FeedCard.module.css';
+import kebabStyles from '../../Styles/AnswerKebab.module.css';
+import KebabStyles from '../../Styles/Kebab.module.css';
+import { deleteAnswerNumber } from '../../Utils/API';
 
 const AnswerKebab = ({ setFix, setAnswerData, setFixData, number, updateFeed }) => {
   const [list, setList] = useState(false);
