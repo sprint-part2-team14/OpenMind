@@ -51,14 +51,12 @@ const ModalPage = ({ onClose, userData }) => {
             <img className={Styles.profileImg} src={userData?.imageSource} alt='프로필 이미지' />
             <p className={Styles.profileContext}>{userData?.name}</p>
           </div>
-          <div className={Styles.inputText}>
+          <form className={Styles.inputText}>
             <InputTextArea value={question} onChange={handleQuestion} />
-          </div>
-          <div className={Styles.sendButton}>
-            <BoxButton onClick={handleQuestionOnClick} theme='outline'>
+            <BoxButton type='submit' onClick={handleQuestionOnClick} theme='outline'>
               질문 보내기
             </BoxButton>
-          </div>
+          </form>
         </div>
       </div>
     </div>

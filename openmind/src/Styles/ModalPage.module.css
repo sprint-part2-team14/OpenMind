@@ -79,6 +79,9 @@
 }
 
 .inputText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
   margin-top: 1.5rem;
   width: 100%;
   min-height: 18rem;
