@@ -19,6 +19,7 @@ const MainPage = () => {
       try {
         const result = await postRequest('subjects/', { name: userId });
         navigate(`/post/${result.id}/answer`);
+        localStorage.setItem('subjectId', result.id);
       } catch (error) {
         console.error('작업 수행 중 오류 발생 : ', error);
       }

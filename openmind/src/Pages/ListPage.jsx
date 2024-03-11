@@ -41,11 +41,13 @@ const ListPage = () => {
     navigate(`/post/${subjectId}`);
   };
 
-  const handleAnswerBtn = subjectId => {
-    if (subjectId === null) {
+  const handleAnswerBtn = () => {
+    const subjectId = localStorage.getItem('subjectId');
+    if (subjectId) {
+      navigate(`/post/${subjectId}/answer`);
+    } else {
       navigate('/');
     }
-    navigate(`/post/${subjectId}/answer`);
   };
 
   fetchData();
