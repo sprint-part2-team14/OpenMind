@@ -17,20 +17,20 @@ const getRequest = async endpoint => {
   }
 };
 
-// const postRequest = async (endpoint, data) => {
-//   try {
-//     const response = await axios.post(`${baseUrl}${endpoint}`, data);
+export const postRequest = async (endpoint, data) => {
+  try {
+    const response = await axios.post(`${baseUrl}${endpoint}`, data);
 
-//     if (response.status !== 200) {
-//       throw new Error(`${endpoint}에서 불러오는데 실패했습니다`);
-//     }
+    if (response.status !== 200) {
+      throw new Error(`${endpoint}에서 불러오는데 실패했습니다`);
+    }
 
-//     return response.data;
-//   } catch (error) {
-//     console.log(error);
-//     throw error;
-//   }
-// };
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
 
 export const patchRequest = async (endpoint, data) => {
   try {
