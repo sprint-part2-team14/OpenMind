@@ -44,7 +44,7 @@
 .headerFont {
   display: flex;
   font-family: Actor;
-  font-size: 2.4rem;
+  font-size: var(--h3);
   font-weight: 400;
   line-height: 3rem; /* 125% */
   color: var(--gray60);
