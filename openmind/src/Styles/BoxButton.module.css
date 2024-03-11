@@ -3,12 +3,22 @@
   gap: 0.4rem;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.2rem;
-  height: 3.4rem;
+  padding: 1.2rem 2.4rem;
+
   font-size: var(--caption);
   font-weight: 400;
   line-height: 1.8rem;
+  cursor: pointer;
   border-radius: 0.8rem;
+}
+
+.boxButton.outline {
+  padding: 0.8rem 1.2rem;
+  height: 3.4rem;
+}
+
+.boxButton.fill {
+  height: 4.6rem;
 }
 
 /* Theme */
@@ -89,10 +99,14 @@
   .boxButton {
     gap: 0.8rem;
     padding: 1.2rem 2.4rem;
-    width: 100%;
     height: 4.8rem;
     font-size: var(--body3);
     font-weight: 400;
     line-height: 2.2rem;
+  }
+
+  .boxButton.outline {
+    padding: 1.2rem 2.4rem;
+    height: 4.6rem;
   }
 }
