@@ -7,12 +7,12 @@
 // import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
 
-import { ReactionAPI } from "../Utils/ReactionAPI";
-
+import { useParams } from "react-router-dom";
+import { getSubjectInfo, getAnswerUpdate } from "../Utils/API";
 import AnswerFeedCardRender from "../Components/AnswerPage/AnswerFeedCardRender";
 import PostnAnswerLayout from "../Layout/PostnAnswerLayout";
-import AnswerDeleteButton from "../Components/AnswerPage/AnswerDeleteButton";
 import DeleteButton from "../Components/Button/DeleteButton";
+import mainStyles from "../Styles/AnswerFeedCard.module.css";
 
 const AnswerPage = () => {
   const [imgSource, setImgSource] = useState();
@@ -20,16 +20,13 @@ const AnswerPage = () => {
   const [count, setCount] = useState();
   const [results, setResults] = useState([]);
 
-  // const param = useParams();
-  const subjectId = 3943; //param.id
+  const param = useParams();
+  const subjectId = param.subjectId;
 
   // api를 먼저가져오기
   async function apiGet() {
-    const answerApi = await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${subjectId}/`, "GET");
-    const questionApi = await ReactionAPI(
-      `https://openmind-api.vercel.app/4-14/subjects/${subjectId}/questions/`,
-      "GET"
-    );
+    const answerApi = await getSubjectInfo(subjectId);
+    const questionApi = await getAnswerUpdate(subjectId);
     // 가져온 결과를 저장
     setImgSource(answerApi.imageSource);
     setName(answerApi.name);
@@ -38,7 +35,6 @@ const AnswerPage = () => {
     if (JSON.stringify(results) !== JSON.stringify(questionApi.results)) {
       setResults(questionApi.results);
     }
-    console.log(questionApi);
   }
   useEffect(() => {
     apiGet();
@@ -47,9 +43,11 @@ const AnswerPage = () => {
   return (
     <>
       <PostnAnswerLayout name={name} imageSource={imgSource} questionCount={count}>
-        <DeleteButton onClick={AnswerDeleteButton} setCount={setCount}>
-          삭제하기
-        </DeleteButton>
+        <div className={mainStyles.delete}>
+          <DeleteButton id={subjectId} setCount={setCount}>
+            삭제하기
+          </DeleteButton>
+        </div>
         <AnswerFeedCardRender
           subjectId={subjectId}
           name={name}

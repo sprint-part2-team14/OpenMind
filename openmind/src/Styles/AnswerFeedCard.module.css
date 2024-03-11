@@ -1,0 +1,41 @@
+.disabled {
+  pointer-events: none;
+  background: var(--brown30);
+  color: var(--gray10);
+}
+.abled {
+  pointer-events: auto;
+}
+.delete {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.4rem;
+}
+.space {
+  width: 20rem;
+}
+.textSpace {
+  display: flex;
+  height: 18.6rem;
+  padding: 1.6rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--gray20);
+  width: 100%;
+}
+.button {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .space {
+    width: 55rem;
+  }
+}
