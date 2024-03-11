@@ -28,6 +28,8 @@
   margin-top: 12rem;
   font-size: 3rem;
   color: var(--brown40);
+  word-break: keep-all;
+  text-align: center;
 }
 
 @media (min-width: 768px) {

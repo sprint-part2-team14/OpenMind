@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 // totalItems : 전체 아이템의 수
 // limit : 한페이지당 표시할 아이템 수
 // page : 현재 선택된 페이지는 나타냄
-// setPage : 페이지를 변경할 때 호출되는 이벤트
-const Pagenation = ({ totalItems, limit, page, setPage }) => {
+// onClick : 페이지를 변경할 때 호출되는 이벤트
+const Pagenation = ({ totalItems, limit, page, onClick }) => {
   const totalPage = Math.ceil(totalItems / limit);
   const [currentPageArray, setCurrentPageArray] = useState([]);
   const [totalPageArray, setTotalPageArray] = useState([]);
@@ -33,17 +33,17 @@ const Pagenation = ({ totalItems, limit, page, setPage }) => {
 
   return (
     <div>
-      <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+      <button onClick={() => onClick(page - 1)} disabled={page === 1}>
         왼쪽
       </button>
       <div>
         {currentPageArray?.map(i => (
-          <button key={i + 1} onClick={() => setPage(i + 1)} aria-current={page === i + 1 ? 'page' : null}>
+          <button key={i + 1} onClick={() => onClick(i + 1)} aria-current={page === i + 1 ? 'page' : null}>
             {i + 1}
           </button>
         ))}
       </div>
-      <button onClick={() => setPage(page + 1)} disabled={page === totalPage}>
+      <button onClick={() => onClick(page + 1)} disabled={page === totalPage}>
         오른쪽
       </button>
     </div>

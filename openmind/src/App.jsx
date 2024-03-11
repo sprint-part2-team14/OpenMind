@@ -9,21 +9,17 @@ import AnswerPage from "./Pages/AnswerPage";
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<AnswerPage />}></Route>
+      <Route path='/'>
+        <Route index element={<MainPage />} />
+        <Route path='list'>
+          <Route index element={<ListPage />} />
+        </Route>
+        <Route path='post'>
+          <Route path=':subjectId' element={<PostPage />} />
+          <Route path=':subjectId/answer' element={<AnswerPage />} />
+        </Route>
+      </Route>
     </Routes>
-    // <Routes>
-    //   <Route path='/'>
-    //     <Route index element={<MainPage />} />
-    //     <Route path='list'>
-    //       <Route index element={<ListPage />} />
-    //     </Route>
-    //     <Route path='post'>
-    //       <Route path=':id' element={<PostPage />} />
-    //       <Route path=':id/answer' element={<AnswerPage />} />
-    //     </Route>
-    //   </Route>
-    // </Routes>
-    // <AnswerPage/>
   );
 }
 

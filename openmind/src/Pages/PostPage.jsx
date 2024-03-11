@@ -1,8 +1,11 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
+import { useParams } from 'react-router-dom';
 import { getSubjectInfo, getSubjectQuestion } from '../Utils/API';
+import useModal from '../Hooks/useModal';
 import PostnAnswerLayout from '../Layout/PostnAnswerLayout';
 import FeedCard from '../Components/FeedCard/FeedCard';
 import FloatingButton from '../Components/Button/FloatingButton';
+import ModalPage from './ModalPage';
 
 import Styles from '../Styles/PostPage.module.css';
 import NO_QUESTION from '../Assets/Images/imageNoQuestion.svg';
@@ -15,13 +18,16 @@ const PostPage = () => {
   const [loading, setLoading] = useState(false); //데이터 로딩 상태
   const lastElementRef = useRef(null); //페이지 하단에 위치하고 Intersection Observer에 의해 관찰될 요소를 참조하기 위한 ref
 
+  const { subjectId } = useParams();
+  const { modalState, openModal, closeModal } = useModal();
+
   //질문 데이터 가져오기 (비동기)
   const fetchAskData = useCallback(async () => {
     if (loading || !hasMore) return;
     setLoading(true);
 
     try {
-      const askResult = await getSubjectQuestion(offset);
+      const askResult = await getSubjectQuestion(subjectId, offset);
       const askResults = askResult.results;
       setAskData(prevAskData => [...prevAskData, ...askResults]);
 
@@ -35,13 +41,13 @@ const PostPage = () => {
     } finally {
       setLoading(false);
     }
-  }, [offset, loading, hasMore]); //useCallback 메모이제이션
+  }, [subjectId, offset, loading, hasMore]); //useCallback 메모이제이션
 
   //유저 프로필 데이터 가져오기 (비동기)
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const userResult = await getSubjectInfo();
+        const userResult = await getSubjectInfo(subjectId);
         setUserData(userResult);
       } catch (error) {
         console.error('Error fetching data:', error.message);
@@ -49,7 +55,7 @@ const PostPage = () => {
     };
 
     fetchUserData();
-  }, []);
+  }, [subjectId]);
 
   //Intersection Observer 설정
   //페이지 하단의 lastElementRef가 viewport에 진입하는 순간을 감지하여,
@@ -81,9 +87,6 @@ const PostPage = () => {
     fetchAskData();
   }, []);
 
-  console.log(askData);
-  console.log(userData);
-
   return (
     <div>
       {askData?.length ? (
@@ -100,8 +103,9 @@ const PostPage = () => {
             {!hasMore && <div className={Styles.loading}>No more questions to load.</div>}
           </PostnAnswerLayout>
           <div className={Styles.button}>
-            <FloatingButton>질문 작성하기</FloatingButton>
+            <FloatingButton onClick={openModal}>질문 작성</FloatingButton>
           </div>
+          {modalState && <ModalPage onClose={closeModal} userData={userData} />}
         </div>
       ) : (
         <div className={Styles.background}>
@@ -116,8 +120,9 @@ const PostPage = () => {
             <div ref={lastElementRef} style={{ height: '20px' }}></div>
           </PostnAnswerLayout>
           <div className={Styles.button}>
-            <FloatingButton>질문 작성하기</FloatingButton>
+            <FloatingButton onClick={openModal}>질문 작성</FloatingButton>
           </div>
+          {modalState && <ModalPage onClose={closeModal} userData={userData} />}
         </div>
       )}
     </div>
