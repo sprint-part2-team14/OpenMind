@@ -11,16 +11,24 @@ import { patchRequest } from "../../Utils/API";
 import { ReactComponent as KEBAB_SRC } from "../../Assets/Icon/iconMore.svg";
 
 const AnswerFeedCardRender = ({ subjectId, imageSource, results, setResults }) => {
-  const [fix, setFix] = useState({}); // 수정하기
-  const [answerData, setAnswerData] = useState({}); // 답변 데이터
-  const [fixData, setFixData] = useState({}); // 수정 데이터
+  const [fix, setFix] = useState({}); // 수정하기(여러 데이터이므로 객체로 선언)
+  const [answerData, setAnswerData] = useState({}); // 답변 데이터(여러 데이터이므로 객체로 선언)
+  const [fixData, setFixData] = useState({}); // 수정 데이터(여러 데이터이므로 객체로 선언)
 
+  // input의 value에 따라 답변하기의 상태를 변화해주기 위해 target을 활용하여 객체로 선언
   const targetValue = event => {
-    setAnswerData({ [event.target.name]: event.target.value }); // 각각 feedcard에 주기 위해 객체로 선언
+    setAnswerData({ [event.target.name]: event.target.value });
   };
-
+  // input의 value에 따라 수정하기의 상태를 변화해주기 위해 target을 활용하여 객체로 선언
   const fixTargetValue = event => {
     setFixData({ [event.target.name]: event.target.value });
+  };
+
+  const updateFeed = async () => {
+    // 새로고침 로직
+    setResults(
+      (await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${subjectId}/questions/`, "GET")).results
+    );
   };
 
   const feedAnswer = async number => {
@@ -32,8 +40,7 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, results, setResults }) =
       team: "4-14",
     });
     if (Object.keys(response).length > 3) {
-      // prettier-ignore
-      setResults((await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${subjectId}/questions/`, "GET")).results);
+      updateFeed();
     }
   };
 
@@ -45,8 +52,7 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, results, setResults }) =
     });
     if (Object.keys(response).length > 3) {
       setFix({ [number]: false });
-      // prettier-ignore
-      setResults((await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${subjectId}/questions/`, "GET")).results);
+      updateFeed();
     }
   };
 
@@ -55,7 +61,17 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, results, setResults }) =
       {console.log(index)}
       <header className={Styles.nav}>
         {index.answer === null ? <BadgeGray /> : <BadgeBrown />}
-        {index.answer !== null ? <AnswerKebab setFix={setFix} number={index.answer.id} /> : <KEBAB_SRC />}
+        {index.answer !== null ? (
+          <AnswerKebab
+            setFix={setFix}
+            setAnswerData={setAnswerData}
+            setFixData={setFixData}
+            number={index.answer.id}
+            updateFeed={updateFeed}
+          />
+        ) : (
+          <KEBAB_SRC />
+        )}
       </header>
       <main>
         <p>질문 · {index.createdAt}</p>
