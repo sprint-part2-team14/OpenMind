@@ -8,6 +8,7 @@
   height: 16.2rem;
   background: var(--gray10);
   border-radius: 16px;
+}
 
 .profileBox {
   display: flex;
