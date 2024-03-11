@@ -21,8 +21,6 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /*width: 90.6rem;
-  height: 17.7rem;*/
 }
 
 .logo {
@@ -133,7 +131,6 @@ html {
     height: 30vh;
   }
   .headerImage {
-    /*width: 120rem;*/
     width: 150%;
     height: 35vh;
   }

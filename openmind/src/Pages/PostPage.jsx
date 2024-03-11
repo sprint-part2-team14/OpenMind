@@ -87,9 +87,6 @@ const PostPage = () => {
     fetchAskData();
   }, []);
 
-  console.log(askData);
-  console.log(userData);
-
   return (
     <div>
       {askData?.length ? (

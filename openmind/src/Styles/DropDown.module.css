@@ -21,7 +21,7 @@
   color: var(--gray40);
   font-size: var(--caption);
   font-weight: 500;
-  line-height: 1.8rem; /* 128.571% */
+  line-height: 1.8rem;
 }
 .dropDown:hover .dropList {
   display: flex;
@@ -66,5 +66,5 @@
   color: var(--gray60);
   font-size: var(--caption);
   font-weight: 500;
-  line-height: 1.8rem; /* 128.571% */
+  line-height: 1.8rem;
 }
