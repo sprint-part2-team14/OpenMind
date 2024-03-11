@@ -2,7 +2,7 @@ import { useState } from "react";
 import KEBAB_SRC from "../../Assets/Icon/iconMore.svg";
 import Styles from "../../Styles/FeedCard.module.css";
 import KebabStyles from "../../Styles/Kebab.module.css";
-import { deleteRequest } from "../../Utils/API";
+import { deleteAnswerNumber } from "../../Utils/API";
 
 const AnswerKebab = ({ setFix, setAnswerData, setFixData, number, updateFeed }) => {
   const [list, setList] = useState(false);
@@ -15,7 +15,7 @@ const AnswerKebab = ({ setFix, setAnswerData, setFixData, number, updateFeed }) 
     setFix({ [number]: true });
   };
   const answerDelete = () => {
-    deleteRequest(`answers/${number}/`);
+    deleteAnswerNumber(number);
     setAnswerData({});
     setFixData({});
     updateFeed();

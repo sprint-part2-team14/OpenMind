@@ -3,10 +3,9 @@ import Styles from "../../Styles/FeedCard.module.css";
 import Reaction from "../Reaction/Reaction";
 import BadgeBrown from "../Badge/BadgeBrown";
 import BadgeGray from "../Badge/BadgeGray";
-import { ReactionAPI } from "../../Utils/ReactionAPI";
 import AnswerKebab from "./AnswerKebab";
 import { useState } from "react";
-import { patchRequest } from "../../Utils/API";
+import { getAnswerUpdate, postAnswerNumber, patchAnswerNumber } from "../../Utils/API";
 
 import { ReactComponent as KEBAB_SRC } from "../../Assets/Icon/iconMore.svg";
 
@@ -26,14 +25,12 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, results, setResults }) =
 
   const updateFeed = async () => {
     // 새로고침 로직
-    setResults(
-      (await ReactionAPI(`https://openmind-api.vercel.app/4-14/subjects/${subjectId}/questions/`, "GET")).results
-    );
+    setResults((await getAnswerUpdate(subjectId)).results);
   };
 
   const feedAnswer = async number => {
     // number = index.id
-    const response = await ReactionAPI(`https://openmind-api.vercel.app/4-14/questions/${number}/answers/`, "POST", {
+    const response = await postAnswerNumber(number, {
       questionId: number,
       content: answerData[number],
       isRejected: true,
@@ -46,7 +43,7 @@ const AnswerFeedCardRender = ({ subjectId, imageSource, results, setResults }) =
 
   const feedFix = async (number, index) => {
     // number = index.answer.id
-    const response = await patchRequest(`answers/${number}/`, {
+    const response = await patchAnswerNumber(number, {
       content: fixData[index.id],
       isRejected: true,
     });
