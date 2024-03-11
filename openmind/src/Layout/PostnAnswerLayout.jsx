@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import Styles from "../Styles/PostnAnswerLayout.module.css";
+import React, { useState } from 'react';
+import Styles from '../Styles/PostnAnswerLayout.module.css';
 
-import LOGO from "../Assets/Images/imageLogo.svg";
-import MESSAGE_ICON from "../Assets/Icon/iconMessages.svg";
+import LOGO from '../Assets/Images/imageLogo.svg';
+import MESSAGE_ICON from '../Assets/Icon/iconMessages.svg';
 
-import ShareButton from "../Components/Button/ShareButton";
-import Toast from "../Components/Toast";
+import ShareButton from '../Components/Button/ShareButton';
+import Toast from '../Components/Toast';
 
 const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
   const currentUrl = window.location.href;
@@ -18,11 +18,11 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
         setShowToast(true);
         setTimeout(() => setShowToast(false), 5000);
       })
-      .catch(error => alert("링크 복사 실패 : ", error));
+      .catch(error => alert('링크 복사 실패 : ', error));
   };
 
   const shareFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, "_blank");
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, '_blank');
   };
 
   return (
@@ -30,8 +30,8 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
       <div className={Styles.header}></div>
       <div className={Styles.main}>
         <div className={Styles.profileArea}>
-          <a href='/' className={Styles.logo}>
-            <img src={LOGO} className={Styles.logoImg} alt='로고이미지' />
+          <a href="/" className={Styles.logo}>
+            <img src={LOGO} className={Styles.logoImg} alt="로고이미지" />
           </a>
           <div className={Styles.profileGroup}>
             <img src={imageSource} className={Styles.profileImage} />

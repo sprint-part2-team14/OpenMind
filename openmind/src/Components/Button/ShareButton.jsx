@@ -12,7 +12,6 @@ const ShareButton = ({ onClickLink, onClickFacebook, ...rest }) => {
   useEffect(() => {
     Kakao.cleanup();
     Kakao.init('22869ac23d9010c1d34f02399bf1e354'); //JS 키
-    console.log(Kakao.isInitialized());
   }, []);
 
   const shareKakao = () => {
@@ -39,14 +38,14 @@ const ShareButton = ({ onClickLink, onClickFacebook, ...rest }) => {
 
   return (
     <div className={Styles.shareButton}>
-      <button type='button' className={Styles.link} onClick={onClickLink} {...rest}>
-        <img src={LINK} alt='링크 공유 버튼' />
+      <button type="button" className={Styles.link} onClick={onClickLink} {...rest}>
+        <img src={LINK} alt="링크 공유 버튼" />
       </button>
-      <button type='button' className={Styles.kakao} onClick={shareKakao} {...rest}>
-        <img src={KAKAO} alt='카카오톡 공유 버튼' />
+      <button type="button" className={Styles.kakao} onClick={shareKakao} {...rest}>
+        <img src={KAKAO} alt="카카오톡 공유 버튼" />
       </button>
-      <button type='button' className={Styles.faceBook} onClick={onClickFacebook} {...rest}>
-        <img src={FACE_BOOK} alt='페이스북 공유 버튼' />
+      <button type="button" className={Styles.faceBook} onClick={onClickFacebook} {...rest}>
+        <img src={FACE_BOOK} alt="페이스북 공유 버튼" />
       </button>
     </div>
   );

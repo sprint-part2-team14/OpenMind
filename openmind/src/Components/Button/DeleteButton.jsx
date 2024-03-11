@@ -1,4 +1,4 @@
-import Styles from "../../Styles/DeleteButton.module.css";
+import Styles from '../../Styles/DeleteButton.module.css';
 
 const DeleteButton = ({ onClick, children, setCount, ...rest }) => {
   return (
