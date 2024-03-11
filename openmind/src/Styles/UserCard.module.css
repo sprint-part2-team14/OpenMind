@@ -9,6 +9,7 @@
   background: var(--gray10);
   border-radius: 16px;
 }
+
 .profileBox {
   display: flex;
   gap: 1.2rem;
