@@ -26,6 +26,7 @@ const ModalPage = ({ onClose, userData }) => {
     if (question) {
       try {
         await postRequest(`subjects/${userData?.id}/questions/`, { content: question });
+        window.location.reload();
         onClose();
       } catch (error) {
         console.error('작업 수행 중 오류 발생 : ', error);
