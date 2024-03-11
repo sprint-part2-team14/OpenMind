@@ -1,7 +1,7 @@
 import { useState } from "react";
 import KEBAB_SRC from "../../Assets/Icon/iconMore.svg";
 import Styles from "../../Styles/FeedCard.module.css";
-import KebabStyles from "../../Styles/Kekbab.module.css";
+import KebabStyles from "../../Styles/Kebab.module.css";
 import { deleteRequest } from "../../Utils/API";
 
 const AnswerKebab = ({ setFix, setAnswerData, setFixData, number, updateFeed }) => {
