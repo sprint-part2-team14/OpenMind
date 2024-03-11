@@ -7,9 +7,6 @@ import Styles from '../Styles/ListPage.module.css';
 import Pagenation from '../Components/Pagenation';
 import UserCard from '../Components/UserCard';
 
-//PC에서 너비가 1200px 보다 커질 경우
-//내부 내용의 위치는 고정하고 좌우 여백만 커짐
-//PC에서 카드 컴포넌트의 너비는 220px
 const LIMIT = 8;
 
 const ListPage = () => {
