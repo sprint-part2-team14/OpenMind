@@ -1,10 +1,8 @@
 import Styles from '../../Styles/InputTextArea.module.css';
 
-const InputTextArea = () => {
+const InputTextArea = ({ value, onChange }) => {
   return (
-    <form>
-      <textarea className={Styles.input} placeholder='이름을 입력하세요'></textarea>
-    </form>
+    <textarea className={Styles.input} placeholder='질문을 입력해주세요' value={value} onChange={onChange}></textarea>
   );
 };
 
