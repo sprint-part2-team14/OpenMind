@@ -17,7 +17,7 @@
   line-height: 1.8rem;
   color: var(--gray10);
   text-align: center;
-  animation: fadeOut 5s forwards; /* 3초 후 사라지는 애니메이션 */
+  animation: fadeOut 5s forwards; /* 5초 후 사라지는 애니메이션 */
   border-radius: 8px;
   transform: translateX(-50%);
 }

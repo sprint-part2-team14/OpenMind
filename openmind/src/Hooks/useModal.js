@@ -5,12 +5,10 @@ const useModal = () => {
 
   const openModal = () => {
     setModalState(true);
-    console.log(modalState);
   };
 
   const closeModal = () => {
     setModalState(false);
-    console.log(modalState);
   };
 
   return {
