@@ -12,6 +12,7 @@ import { getSubjectInfo, getAnswerUpdate } from "../Utils/API";
 import AnswerFeedCardRender from "../Components/AnswerPage/AnswerFeedCardRender";
 import PostnAnswerLayout from "../Layout/PostnAnswerLayout";
 import DeleteButton from "../Components/Button/DeleteButton";
+import mainStyles from "../Styles/AnswerFeedCard.module.css";
 
 const AnswerPage = () => {
   const [imgSource, setImgSource] = useState();
@@ -34,7 +35,6 @@ const AnswerPage = () => {
     if (JSON.stringify(results) !== JSON.stringify(questionApi.results)) {
       setResults(questionApi.results);
     }
-    console.log(questionApi);
   }
   useEffect(() => {
     apiGet();
@@ -43,9 +43,11 @@ const AnswerPage = () => {
   return (
     <>
       <PostnAnswerLayout name={name} imageSource={imgSource} questionCount={count}>
-        <DeleteButton id={subjectId} setCount={setCount}>
-          삭제하기
-        </DeleteButton>
+        <div className={mainStyles.delete}>
+          <DeleteButton id={subjectId} setCount={setCount}>
+            삭제하기
+          </DeleteButton>
+        </div>
         <AnswerFeedCardRender
           subjectId={subjectId}
           name={name}

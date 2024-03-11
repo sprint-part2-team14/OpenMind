@@ -80,8 +80,8 @@ export const postAnswerNumber = async (number, data) => {
   return postRequest(`questions/${number}/answers/`, data);
 };
 
-export const patchAnswerNumber = async number => {
-  return patchRequest(`answers/${number}/`);
+export const patchAnswerNumber = async (number, data) => {
+  return patchRequest(`answers/${number}/`, data);
 };
 export const deleteAnswerNumber = async number => {
   return deleteRequest(`answers/${number}/`);
