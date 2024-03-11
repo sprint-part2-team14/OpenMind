@@ -17,7 +17,6 @@ const ListPage = () => {
   const fetchUserData = async (offset = 0, sort = 'time') => {
     const userData = await getPageRequest(offset, sort);
 
-    console.log(userData);
     setTotal(userData.count);
     setUsers(userData.results);
   };
@@ -32,7 +31,6 @@ const ListPage = () => {
   };
 
   const handlePage = page => {
-    console.log(page);
     setPage(page);
     fetchUserData(LIMIT * (page - 1));
   };
@@ -51,14 +49,16 @@ const ListPage = () => {
       </div>
       <div className={Styles.subTitleGroup}>
         <h2 className={Styles.subTitle}>누구에게 질문할까요?</h2>
-        <DropDown className={Styles.dropDown} onClick={handleDropDown} />
+        <DropDown onClick={handleDropDown} />
       </div>
       <div className={Styles.userCardContainer}>
         {user?.map(i => (
           <UserCard key={i.id} id={i.id} name={i.name} imageSource={i.imageSource} questionCount={i.questionCount} />
         ))}
       </div>
-      <Pagenation totalItems={total} limit={8} page={page} onClick={handlePage} />
+      <div className={Styles.pagenation}>
+        <Pagenation totalItems={total} limit={8} page={page} onClick={handlePage} />
+      </div>
     </div>
   );
 };

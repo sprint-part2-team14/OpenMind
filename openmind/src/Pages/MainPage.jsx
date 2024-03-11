@@ -18,7 +18,6 @@ const MainPage = () => {
     if (userId) {
       try {
         const result = await postRequest('subjects/', { name: userId });
-        console.log(result);
         navigate(`/post/${result.id}/answer`);
       } catch (error) {
         console.error('작업 수행 중 오류 발생 : ', error);
