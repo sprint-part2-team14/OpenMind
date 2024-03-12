@@ -5,6 +5,7 @@ import AnswerFeedCardRender from '../Components/AnswerPage/AnswerFeedCardRender'
 import PostnAnswerLayout from '../Layout/PostnAnswerLayout';
 import DeleteButton from '../Components/Button/DeleteButton';
 import mainStyles from '../Styles/AnswerFeedCard.module.css';
+import Styles from '../Styles/AnswerPage.module.css';
 
 const AnswerPage = () => {
   const [imgSource, setImgSource] = useState();
@@ -33,7 +34,7 @@ const AnswerPage = () => {
   }, [count, results]);
 
   return (
-    <>
+    <div className={Styles.container}>
       <PostnAnswerLayout name={name} imageSource={imgSource} questionCount={count}>
         <div className={mainStyles.delete}>
           <DeleteButton id={subjectId} setCount={setCount}>
@@ -48,7 +49,7 @@ const AnswerPage = () => {
           setResults={setResults}
         />
       </PostnAnswerLayout>
-    </>
+    </div>
   );
 };
 
