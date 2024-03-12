@@ -34,6 +34,9 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
       </div>
       <div className={Styles.main}>
         <div className={Styles.profileArea}>
+          <a href="/" className={Styles.logo}>
+            <img src={LOGO} className={Styles.logoImg} alt="로고이미지" />
+          </a>
           <div className={Styles.profileGroup}>
             <img src={imageSource} className={Styles.profileImage} />
             <div className={Styles.username}>{name}</div>
@@ -56,7 +59,7 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

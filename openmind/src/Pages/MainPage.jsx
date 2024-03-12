@@ -29,20 +29,20 @@ const MainPage = () => {
   return (
     <div className={Styles.body}>
       <div className={Styles.container}>
-        <a href='/'>
-          <img className={Styles.logoBox} src={IMAGE_LOGO} alt='메인페이지 로고 ' />
+        <a href="/">
+          <img className={Styles.logoBox} src={IMAGE_LOGO} alt="메인페이지 로고 " />
         </a>
-        <Link to='/list?page=1&sort=createdAt'>
+        <Link to="/list?page=1&sort=createdAt">
           <div className={Styles.headButton}>
-            <BoxButton theme='outline' arrow='true'>
+            <BoxButton theme="outline" arrow="true">
               질문하러 가기
             </BoxButton>
           </div>
         </Link>
-        <div className={Styles.inputBox}>
+        <form className={Styles.inputBox}>
           <InputField value={userId} onChange={handleUserId} />
           <BoxButton onClick={handleIdOnClick}>질문 받기</BoxButton>
-        </div>
+        </form>
       </div>
     </div>
   );
