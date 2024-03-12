@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { useParams } from 'react-router-dom';
 import { getSubjectInfo, getAnswerUpdate } from '../Utils/API';
 import AnswerFeedCardRender from '../Components/AnswerPage/AnswerFeedCardRender';

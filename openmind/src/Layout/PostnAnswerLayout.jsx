@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Styles from '../Styles/PostnAnswerLayout.module.css';
-
 import LOGO from '../Assets/Images/imageLogo.svg';
 import MESSAGE_ICON from '../Assets/Icon/iconMessages.svg';
-
 import ShareButton from '../Components/Button/ShareButton';
 import Toast from '../Components/Toast';
 
@@ -26,7 +24,7 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
   };
 
   return (
-    <>
+    <div>
       <div className={Styles.header}>
         <a href="/" className={Styles.logo}>
           <img src={LOGO} className={Styles.logoImg} alt="로고이미지" />

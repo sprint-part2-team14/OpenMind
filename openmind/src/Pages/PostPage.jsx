@@ -6,7 +6,6 @@ import PostnAnswerLayout from '../Layout/PostnAnswerLayout';
 import FeedCard from '../Components/FeedCard/FeedCard';
 import FloatingButton from '../Components/Button/FloatingButton';
 import ModalPage from './ModalPage';
-
 import Styles from '../Styles/PostPage.module.css';
 import NO_QUESTION from '../Assets/Images/imageNoQuestion.svg';
 
@@ -114,7 +113,7 @@ const PostPage = () => {
             imageSource={userData?.imageSource}
             questionCount={userData?.questionCount}>
             <div className={Styles.noQuestion}>
-              <img src={NO_QUESTION} className={Styles.noQuestionImg} alt='질문 없음' />
+              <img src={NO_QUESTION} className={Styles.noQuestionImg} alt="질문 없음" />
             </div>
             {loading && <div className={Styles.loading}>Loading...</div>}
             <div ref={lastElementRef} style={{ height: '20px' }}></div>
@@ -130,14 +129,3 @@ const PostPage = () => {
 };
 
 export default PostPage;
-
-//개별 피드
-//답변이 완료된 질문은 “답변완료”로 표시
-//답변이 완료되지 않은 질문은 “미답변”로 표시
-//“질문 작성하기” 버튼을 클릭하면 “질문을 작성하세요” 모달이 뜸
-//질문은 최신순으로 무한 스크롤 방식으로 배치
-//“링크 아이콘”을 클릭하면 URL을 클립보드에 복사하고, “URL이 복사되었습니다” 토스트가 5초 동안 보이다가 사라짐
-//“카카오 아이콘”을 클릭하면 카카오톡으로 공유하는 화면이 보임
-//“페이스북 아이콘”을 클릭하면 페이스북으로 공유하는 화면이 보임
-//좋아요, 싫어요는 개수를 표시
-//답변이 거절된 질문은 따로 표시
