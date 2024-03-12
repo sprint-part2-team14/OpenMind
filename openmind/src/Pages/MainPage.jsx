@@ -39,10 +39,10 @@ const MainPage = () => {
             </BoxButton>
           </div>
         </Link>
-        <form className={Styles.inputBox}>
+        <div className={Styles.inputBox}>
           <InputField value={userId} onChange={handleUserId} />
           <BoxButton onClick={handleIdOnClick}>질문 받기</BoxButton>
-        </form>
+        </div>
       </div>
     </div>
   );
