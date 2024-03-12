@@ -1,0 +1,33 @@
+.border {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.2rem;
+  background: var(--gray10);
+  border-radius: 8px;
+}
+
+.context {
+  display: flex;
+  font-size: var(--caption);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.borderBrown {
+  border: 1px solid var(--brown40);
+}
+
+.borderGray {
+  border: 1px solid var(--gray40);
+}
+
+.colorBrown {
+  color: var(--brown40);
+}
+
+.colorGray {
+  color: var(--gray40);
+}

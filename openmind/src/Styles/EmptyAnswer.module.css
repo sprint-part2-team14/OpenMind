@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 59.2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.answerArea {
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+  flex: 1 0 0;
+  flex-direction: column;
+}
+
+.username {
+  font-family: Actor;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: var(--gray60);
+}
+
+.answerBox {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+.answerInput {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding: 1.6rem;
+  position: relative;
+  max-width: 20rem;
+  height: 18.6rem;
+  background: var(--gray20);
+  border-radius: 8px;
+}
+
+.answerInput::placeholder {
+  align-self: stretch;
+  position: absolute;
+  top: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--gray40);
+}
+
+.answerButton {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding: 1.2rem 2.4rem;
+  max-width: 20rem;
+  height: 4.6rem;
+  background: var(--brown30);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--gray10);
+  border-radius: 8px;
+}
+
+.answerButton:hover {
+  background: var(--brown40);
+}
+
+@media (min-width: 768px) {
+  .username {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  .profile {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .answerButton {
+    max-width: 54.8rem;
+  }
+  .answerInput {
+    max-width: 54.8rem;
+  }
+}

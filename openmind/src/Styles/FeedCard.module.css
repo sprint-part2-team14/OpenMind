@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2.4rem;
+  box-shadow: var(--shadow1pt);
+  width: 29.5rem;
+  height: 100%;
+  background: var(--gray10);
+  border-radius: 16px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 24.7rem;
+  height: 2.6rem;
+}
+
+.kebab {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.emptyAnswer {
+  color: var(--gray10);
+}
+
+.line {
+  align-self: stretch;
+  height: 0.1rem;
+  background: var(--gray30);
+}
+
+@media (min-width: 768px) {
+  .container {
+    gap: 3.2rem;
+    padding: 3.2rem;
+    width: 68.4rem;
+  }
+
+  .nav {
+    width: 63.6rem;
+  }
+}

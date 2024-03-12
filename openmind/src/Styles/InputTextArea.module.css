@@ -1,0 +1,28 @@
+.input {
+  display: flex;
+  gap: 1rem;
+  padding: 1.6rem;
+  width: 100%;
+  height: 35.8rem;
+  background: var(--gray20);
+  font-size: var(--body3);
+  line-height: 2.2rem;
+  color: var(--gray60);
+  text-align: start;
+  border-radius: 8px;
+  resize: none;
+}
+
+input::placeholder {
+  color: var(--gray40);
+}
+
+.input:focus {
+  box-shadow: inset 0 0 0 0.1rem var(--brown40);
+}
+
+@media (min-width: 768px) {
+  .input {
+    height: 18rem;
+  }
+}

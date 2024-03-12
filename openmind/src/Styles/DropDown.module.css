@@ -1,0 +1,74 @@
+.dropDown {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 7.9rem;
+  cursor: pointer;
+}
+.dropBtn {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--gray40);
+  background: var(--gray10);
+  font-size: var(--caption);
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--gray40);
+  cursor: pointer;
+  border-radius: 8px;
+}
+.dropDown:hover .dropList {
+  display: flex;
+}
+.dropDown:hover .dropBtn {
+  border: 1px solid var(--gray60);
+  color: var(--gray60);
+}
+.arrowUp {
+  display: none;
+}
+.arrowDown {
+  display: block;
+}
+.dropDown:hover .arrowUp {
+  display: block;
+}
+.dropDown:hover .arrowDown {
+  display: none;
+}
+.dropList {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.4rem 0;
+  border: 1px solid var(--gray30);
+  box-shadow: var(--shadow1pt);
+  position: absolute;
+  top: 4rem;
+  background: var(--gray10);
+  border-radius: 8px;
+}
+
+.dropList p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 0.6rem 1.6rem;
+  background: var(--gray10);
+  font-size: var(--caption);
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--gray60);
+}

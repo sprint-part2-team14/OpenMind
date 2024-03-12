@@ -1,0 +1,155 @@
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 17.7rem;
+  background: url("../Assets/Images/imageMainPage.png") no-repeat top;
+  background-color: var(--gray20);
+  background-position: top;
+  background-size: cover;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.logoImg {
+  width: 12.4rem;
+  height: 4.9rem;
+}
+
+.main {
+  display: flex;
+  gap: 5.4rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 10rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.profileArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.profileGroup {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profileImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 10.4rem;
+  height: 10.4rem;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--gray60);
+}
+
+.feedContainer {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.6rem;
+  border: 1px solid var(--brown20);
+  width: 32.7rem;
+  background: var(--brown10);
+  border-radius: 16px;
+}
+
+.questionInfo {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.messageIcon {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.infoText {
+  font-family: Actor;
+  font-size: var(--body2);
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: var(--brown40);
+}
+
+.questionArea {
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .questionArea {
+    gap: 2rem;
+  }
+
+  .header {
+    height: 23.4rem;
+  }
+
+  .logoImg {
+    width: 17rem;
+    height: 6.7rem;
+  }
+
+  .profileImage {
+    width: 13.6rem;
+    height: 13.6rem;
+  }
+
+  .username {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .feedContainer {
+    width: 70.4rem;
+  }
+
+  .messageIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .infoText {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}

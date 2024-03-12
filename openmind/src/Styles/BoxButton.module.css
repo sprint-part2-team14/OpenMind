@@ -1,0 +1,112 @@
+.boxButton {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.4rem;
+
+  font-size: var(--caption);
+  font-weight: 400;
+  line-height: 1.8rem;
+  cursor: pointer;
+  border-radius: 0.8rem;
+}
+
+.boxButton.outline {
+  padding: 0.8rem 1.2rem;
+  height: 3.4rem;
+}
+
+.boxButton.fill {
+  height: 4.6rem;
+}
+
+/* Theme */
+.fill {
+  background: var(--brown40);
+  color: var(--gray10);
+}
+
+.outline {
+  border: 1px solid var(--brown40);
+  background: var(--brown10);
+  color: var(--brown40);
+  border-radius: 8px;
+}
+
+.arrowToPageIcon.fill {
+  width: 1.8rem;
+  fill: var(--gray10);
+}
+
+.arrowToPageIcon.outline {
+  border: none;
+  width: 1.8rem;
+  fill: var(--brown40);
+}
+
+/* State */
+
+/* hover */
+.boxButton:hover {
+  box-shadow: inset 0 0 0 0.2rem var(--brown50);
+}
+
+/* pressed */
+.boxButton:active.fill {
+  background: var(--brown50);
+}
+
+.boxButton:active.outline {
+  background: var(--brown20);
+}
+
+.boxButton:active .arrowToPageIcon.fill {
+  background: var(--brown50);
+}
+
+.boxButton:active .arrowToPageIcon.outline {
+  background: var(--brown20);
+}
+
+/* inactive */
+.boxButton:disabled:hover {
+  box-shadow: none;
+  cursor: default;
+}
+
+.boxButton:disabled.fill {
+  background: var(--brown30);
+}
+
+.boxButton:disabled.outline {
+  border: 1px solid var(--brown30);
+  background: var(--brown10);
+  color: var(--brown30);
+}
+
+.boxButton:disabled .arrowToPageIcon.fill {
+  background: var(--brown30);
+}
+
+.boxButton:disabled .arrowToPageIcon.outline {
+  background: var(--brown10);
+  fill: var(--brown30);
+}
+
+/* Size */
+@media (min-width: 768px) {
+  .boxButton {
+    gap: 0.8rem;
+    padding: 1.2rem 2.4rem;
+    height: 4.8rem;
+    font-size: var(--body3);
+    font-weight: 400;
+    line-height: 2.2rem;
+  }
+
+  .boxButton.outline {
+    padding: 1.2rem 2.4rem;
+    height: 4.6rem;
+  }
+}

@@ -1,0 +1,49 @@
+.background {
+  overflow-x: hidden;
+  height: 100vh;
+  background: var(--gray20);
+}
+
+.button {
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+  z-index: 100;
+}
+
+.noQuestion {
+  margin: 8rem 8rem;
+}
+
+.noQuestionImg {
+  width: 11.4rem;
+  height: 11.8rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 12rem;
+  font-size: 3rem;
+  color: var(--brown40);
+  word-break: keep-all;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .button {
+    right: 5rem;
+  }
+  .noQuestion {
+    margin: 10rem 20rem;
+  }
+  .noQuestionImg {
+    width: 15rem;
+    height: 15.4rem;
+  }
+  .loading {
+    margin-top: 15rem;
+  }
+}

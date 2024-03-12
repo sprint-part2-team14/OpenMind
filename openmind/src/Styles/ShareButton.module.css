@@ -1,0 +1,43 @@
+.shareButton {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.link {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1.6rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--brown40);
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+.kakao {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1.6rem;
+  width: 4rem;
+  height: 4rem;
+  background: var(--yellow50);
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+.faceBook {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1.6rem;
+  width: 4rem;
+  height: 4rem;
+  background: var(--blue50);
+  cursor: pointer;
+  border-radius: 200px;
+}
