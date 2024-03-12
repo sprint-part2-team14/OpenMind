@@ -26,8 +26,12 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
   };
 
   return (
-    <div className={Styles.container}>
-      <div className={Styles.header}></div>
+    <>
+      <div className={Styles.header}>
+        <a href="/" className={Styles.logo}>
+          <img src={LOGO} className={Styles.logoImg} alt="로고이미지" />
+        </a>
+      </div>
       <div className={Styles.main}>
         <div className={Styles.profileArea}>
           <a href="/" className={Styles.logo}>

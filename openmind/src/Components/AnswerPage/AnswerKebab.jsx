@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import KEBAB_SRC from '../../Assets/Icon/iconMore.svg';
 import Styles from '../../Styles/FeedCard.module.css';
+import kebabStyles from '../../Styles/AnswerKebab.module.css';
 import KebabStyles from '../../Styles/Kebab.module.css';
-import { deleteRequest } from '../../Utils/API';
+import { deleteAnswerNumber } from '../../Utils/API';
 
 const AnswerKebab = ({ setFix, setAnswerData, setFixData, number, updateFeed }) => {
   const [list, setList] = useState(false);
@@ -13,25 +14,26 @@ const AnswerKebab = ({ setFix, setAnswerData, setFixData, number, updateFeed }) 
   // 클릭시 (기본false에서) true로 변경
   const answerFix = () => {
     setFix({ [number]: true });
+    setList(!list);
   };
   const answerDelete = () => {
-    deleteRequest(`answers/${number}/`);
+    deleteAnswerNumber(number);
     setAnswerData({});
     setFixData({});
     updateFeed();
   };
   return (
-    <>
+    <div className={kebabStyles.kebabBox}>
       <img className={Styles.kebab} src={KEBAB_SRC} onClick={kebab} />
       <div className={list ? KebabStyles.kebabListTrue : KebabStyles.kebabListFalse}>
-        <p className="삭제하기" onClick={answerDelete}>
+        <p className={kebabStyles.delete} onClick={answerDelete}>
           삭제하기
         </p>
-        <p className="수정하기" onClick={answerFix}>
+        <p className={kebabStyles.fix} onClick={answerFix}>
           수정하기
         </p>
       </div>
-    </>
+    </div>
   );
 };
 export default AnswerKebab;

@@ -13,7 +13,7 @@
   color: var(--gray10);
   cursor: pointer;
   border-radius: 200px;
-  transform: translate(180%, -350%);
+  transform: translateY(-350%);
 }
 
 @media (min-width: 768px) {
@@ -21,6 +21,6 @@
     width: 10rem;
     height: 3.5rem;
     font-size: 1.5rem;
-    transform: translate(300%, -300%);
+    transform: translateY(-300%);
   }
 }
