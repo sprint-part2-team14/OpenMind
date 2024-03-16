@@ -10,7 +10,7 @@ html {
 .header {
   width: 100%;
   height: 17.7rem;
-  background: url("../Assets/Images/imageMainPage.png") no-repeat top;
+  background: url('../Assets/Images/imageMainPage.png') no-repeat top;
   background-color: var(--gray20);
   background-position: top;
   background-size: cover;

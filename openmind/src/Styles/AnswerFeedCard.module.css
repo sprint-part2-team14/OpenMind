@@ -6,10 +6,6 @@
 .abled {
   pointer-events: auto;
 }
-.delete {
-  display: flex;
-  justify-content: flex-end;
-}
 .footer {
   display: flex;
   flex-direction: column;
