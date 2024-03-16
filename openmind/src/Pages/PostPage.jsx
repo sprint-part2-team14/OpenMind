@@ -114,7 +114,7 @@ const PostPage = () => {
             imageSource={userData?.imageSource}
             questionCount={userData?.questionCount}>
             <div className={Styles.noQuestion}>
-              <img src={NO_QUESTION} className={Styles.noQuestionImg} alt='질문 없음' />
+              <img src={NO_QUESTION} className={Styles.noQuestionImg} alt="질문 없음" />
             </div>
             {loading && <div className={Styles.loading}>Loading...</div>}
             <div ref={lastElementRef} style={{ height: '20px' }}></div>

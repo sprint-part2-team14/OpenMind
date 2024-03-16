@@ -59,7 +59,7 @@ const PostnAnswerLayout = ({ name, imageSource, questionCount, children }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

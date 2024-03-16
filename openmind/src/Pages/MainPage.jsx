@@ -41,7 +41,9 @@ const MainPage = () => {
         </Link>
         <form className={Styles.inputBox}>
           <InputField value={userId} onChange={handleUserId} />
-          <BoxButton onClick={handleIdOnClick}>질문 받기</BoxButton>
+          <BoxButton type="submit" onClick={handleIdOnClick}>
+            질문 받기
+          </BoxButton>
         </form>
       </div>
     </div>
